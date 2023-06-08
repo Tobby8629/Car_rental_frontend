@@ -23,31 +23,36 @@
   backdrop-filter: blur(25px);
   padding: 1rem 0;
   padding-left: 1rem;
-  transition: .5s;
+  transition: 0.5s;
   z-index: 99;
 }
 
 .block {
-  left: -100%
+  left: -100%;
 }
 
 .show {
-  left: 0
+  left: 0;
 }
 
 .top h2 {
-   margin-bottom: 6rem;
-   text-align: left;
-   font-size: 15px;
+  margin-bottom: 6rem;
+  text-align: left;
+  font-size: 15px;
 }
 
 .top li {
   text-align: left;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   padding: 10px 0;
-  border-top-right-radius:3px;
+  border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  transition: .3s linear;
+  transition: 0.3s linear;
+}
+
+.socials li {
+  margin-right: 1rem;
+  font-size: 1.5rem;
 }
 
 .top li:active {
@@ -62,30 +67,22 @@
 
 .top a {
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: rgb(61, 61, 61);
   outline: none;
   text-transform: uppercase;
 }
 
 .top a:active {
-  color: white
+  color: white;
 }
 
 .top a:hover {
   color: rgb(255, 254, 254);
 }
 
-.socials ul{
+.socials ul {
   display: flex;
-}
-
-.socials li {
-  margin-right: 1rem;
-}
-
-.socials li {
-  font-size: 1.5rem;
 }
 
 .cancel {
@@ -101,7 +98,7 @@
     left: 0;
     padding: 2rem 0;
     padding-left: 2rem;
-    box-shadow: 0px 0px 10px 0px rgb(200, 200, 200);
+    box-shadow: 0 0 10px 0 rgb(200, 200, 200);
   }
 
   .show,
@@ -113,14 +110,15 @@
     font-size: 1.2rem;
   }
 
-
   .top li:active {
     background-color: greenyellow;
+
     /* padding:1.2rem 2.5rem; */
   }
-  
+
   .top li:hover {
     background-color: greenyellow;
+
     /* padding: 1.2rem 2.5rem; */
   }
 }
