@@ -12,6 +12,12 @@ a {
   text-decoration: none;
 }
 
+section,
+.form {
+  padding: 1rem;
+  padding-top: 5rem;
+}
+
 body {
   margin: 0;
   font-family:
