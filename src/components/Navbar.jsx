@@ -4,12 +4,13 @@ import './componentsCss/navbar.css';
 
 function Navbar() {
   const [tray, settray] = useState(true);
+
   return (
     <>
       <div className="mobile bars" role="button" onClick={() => settray(false)} onKeyDown={() => settray(false)} tabIndex={0}>
         <i className="fa-solid fa-bars" />
       </div>
-      <div id="navbar" className={tray ? 'block' : 'show'}>
+      <div id="navbar" className={tray ? 'block' : 'show'} role="button" onClick={() => settray(true)} onKeyDown={() => settray(false)} tabIndex={0}>
         <div className="top">
           <h2>CAR RENT</h2>
           <ul>
@@ -27,6 +28,9 @@ function Navbar() {
             </li>
             <li>
               <Link to="delete">Delete Car</Link>
+            </li>
+            <li>
+              <Link to="login">sign in</Link>
             </li>
           </ul>
         </div>
