@@ -7,8 +7,10 @@ function Navbar() {
 
   return (
     <>
-      <div className="mobile bars" role="button" onClick={() => settray(false)} onKeyDown={() => settray(false)} tabIndex={0}>
-        <i className="fa-solid fa-bars" />
+      <div className="mobile bars">
+        <span role="button" onClick={() => settray(false)} onKeyDown={() => settray(false)} tabIndex={0}>
+          <i className="fa-solid fa-bars" />
+        </span>
       </div>
       <div id="navbar" className={tray ? 'block' : 'show'} role="button" onClick={() => settray(true)} onKeyDown={() => settray(false)} tabIndex={0}>
         <div className="top">
