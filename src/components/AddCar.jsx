@@ -2,9 +2,9 @@ import React from 'react';
 
 function AddCar() {
   return (
-    <section className="container w-50">
-      <div className="row d-flex justify-content-center align-items-center">
-        <div className="col-md-6">
+    <section className="container w-100 d-flex justify-content-center align-items-center">
+      <div className="row">
+        <div className="col-md-6 w-100">
           <h1 className="text-primary pb-1">Add New Car</h1>
           <form>
             <div className="mb-3">
@@ -71,9 +71,9 @@ function AddCar() {
                   rows="3"
                 />
               </label>
-              <div className="mb-3">
-                <input type="submit" className="btn btn-primary" value="Add Car" />
-              </div>
+            </div>
+            <div className="mb-3">
+              <input type="submit" className="btn btn-primary" value="Add Car" />
             </div>
           </form>
         </div>
