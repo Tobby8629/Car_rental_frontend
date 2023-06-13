@@ -88,7 +88,10 @@ function Cars() {
               <img src={e.image} alt={e.name} />
             </div>
             <h4>{e.name}</h4>
-            <p>{e.description}</p>
+            <p>
+              {e.description.split(' ').slice(0, 15).join(' ')}
+              . . .
+            </p>
             <ul>
               <li><i className="fa-brands fa-twitter" /></li>
               <li><i className="fa-brands fa-facebook-f" /></li>
