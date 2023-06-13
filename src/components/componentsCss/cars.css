@@ -116,6 +116,7 @@
     box-shadow: none;
     background-color: transparent;
     width: 33%;
+    margin: 10px 5px;
   }
 
   .each p {
