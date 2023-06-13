@@ -122,12 +122,20 @@
     font-size: 15px;
   }
 
+  .image img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
   .each li {
     margin: 5px;
   }
 
+  
+}
+
+@media (min-width: 1000px) {
   .image img {
     width: 200px;
-    border-radius: 50%;
   }
 }
