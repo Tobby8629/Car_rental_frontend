@@ -130,8 +130,6 @@
   .each li {
     margin: 5px;
   }
-
-  
 }
 
 @media (min-width: 1000px) {
