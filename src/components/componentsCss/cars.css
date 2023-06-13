@@ -20,9 +20,16 @@
   margin: 2rem 0;
 }
 
+.cars h4 {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 10px 0;
+  font-size: 18px;
+} 
+
 
 .each {
-  padding: 20px 0;
+  padding: 20px 10px;
   box-shadow: 0px 0px 5px 0px gray;
   margin: 10px 0;
 }
@@ -76,4 +83,54 @@
   border-bottom-left-radius: 50%;
   position: absolute;
   right: 0;
+}
+
+.header p {
+  text-align: center;
+  font-weight: 500;
+  color: rgb(160, 160, 160);
+}
+
+@media (min-width:768px) {
+  .cars {
+    height: 100vh;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .all {
+    display: flex;
+  }
+
+  .cars h2 {
+    margin: 0;
+  }
+
+  .btn button {
+    padding: 0;
+    height: 70px;
+    width: 70px;
+    top:50%
+  }
+
+  .each {
+    box-shadow: none;
+    background-color: transparent;
+    width: 33%;
+  }
+
+  .each p {
+    font-size: 15px;
+  }
+
+  .each li {
+    margin: 5px;
+  }
+
+  .image img {
+    width: 200px;
+    border-radius: 50%;
+  }
 }

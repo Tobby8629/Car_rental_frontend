@@ -6,21 +6,21 @@ function Cars() {
     {
       name: 'range rover',
       price: 2000,
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
       year: 2022,
       image: 'car1.jpg',
     },
     {
       name: 'mercedes',
       price: 2000,
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
       year: 2022,
       image: 'car2.jpg',
     },
     {
       name: 'chevrolet',
       price: 2000,
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
       year: 2022,
       image: 'car3.jpg',
     },
@@ -54,11 +54,6 @@ function Cars() {
   const last = car * perpage;
   const first = last - perpage;
   const each = cars.slice(first, last);
-  // const [scar, setscar] = useState(1);
-  // const sperpage = 1;
-  // const lastpage = scar * sperpage;
-  // const firstpage = lastpage - sperpage;
-  // const one = cars.slice(firstpage, lastpage);
   const next = () => {
     if (car >= Math.floor(cars.length / 3)) {
       setbuttondis(true);
@@ -81,19 +76,23 @@ function Cars() {
 
   return (
     <section className="cars">
-      <h2>Latest Cars</h2>
+      <div className="header">
+        <h2>Need a Car to rent ?</h2>
+        <p>checkout our available cars</p>
+      </div>
+
       <div className="all">
         {each.map((e) => (
           <div className="each" key={e.name}>
             <div className="image">
               <img src={e.image} alt={e.name} />
             </div>
+            <h4>{e.name}</h4>
             <p>{e.description}</p>
             <ul>
               <li><i className="fa-brands fa-twitter" /></li>
               <li><i className="fa-brands fa-facebook-f" /></li>
               <li><i className="fa-brands fa-instagram" /></li>
-              <li><i className="fa-brands fa-snapchat" /></li>
             </ul>
           </div>
         ))}
