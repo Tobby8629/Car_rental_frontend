@@ -7,7 +7,6 @@
 }
 
 .form form {
-  height: 40%;
   width: 80%;
   position: absolute;
   top: 50%;
@@ -35,13 +34,6 @@
   bottom: -13px;
 }
 
-.form form div {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5rem 0;
-  margin-top: 2rem;
-}
-
 .form form label {
   font-size: 18px;
 }
@@ -51,6 +43,7 @@
   margin: 0.5rem 0;
   font-size: 18px;
   outline: none;
+  width: 100%;
   border: none;
   border-radius: 5px;
 }
@@ -66,6 +59,18 @@
   width: 100%;
   padding: 0.5rem;
   border: 1px solid gray;
+}
+
+.form-btn button:active {
+  background-color: yellowgreen;
+  color: white;
+  border: none;
+}
+
+.form-btn button:hover {
+  background-color: yellowgreen;
+  color: white;
+  border: none;
 }
 
 .form p {
@@ -89,7 +94,7 @@
 
   .form h2::after {
     width: 15%;
-    height: 10px;
+    height: 8px;
   }
 
   .form form input,
@@ -98,7 +103,16 @@
     font-size: 25px;
   }
 
+  .form form input {
+    padding: 1rem;
+  }
+
   .form p {
     margin: 0.5rem 0;
+  }
+
+  .sign form {
+    width: 70%;
+    padding: 3rem 8rem;
   }
 }
