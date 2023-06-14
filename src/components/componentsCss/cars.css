@@ -19,11 +19,13 @@
   margin: 2rem 0;
 }
 
-.cars h4 {
+.cars .link {
   text-align: center;
+  display: block;
   text-transform: capitalize;
   margin: 10px 0;
   font-size: 18px;
+  color: rgb(44, 44, 44);
 }
 
 .each {
