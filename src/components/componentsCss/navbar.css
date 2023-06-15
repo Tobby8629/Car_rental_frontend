@@ -15,7 +15,7 @@
 #navbar {
   width: 50%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -107,7 +107,7 @@
   }
 
   .top a {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
 
   .top li:active {
@@ -120,5 +120,11 @@
     background-color: greenyellow;
 
     /* padding: 1.2rem 2.5rem; */
+  }
+}
+
+@media (min-width: 1000px) {
+  .top a {
+    font-size: 1.2rem;
   }
 }

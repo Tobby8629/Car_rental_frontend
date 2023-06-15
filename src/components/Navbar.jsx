@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './componentsCss/navbar.css';
+import { useDispatch } from 'react-redux';
+import { logout } from './Redux/UserSlice';
 
 function Navbar() {
+  const dispatch = useDispatch();
   const [tray, settray] = useState(true);
+  const signout = () => {
+    dispatch(logout());
+  };
 
   return (
     <>
-      <div className="mobile bars" role="button" onClick={() => settray(false)} onKeyDown={() => settray(false)} tabIndex={0}>
-        <i className="fa-solid fa-bars" />
+      <div className="mobile bars">
+        <span role="button" onClick={() => settray(false)} onKeyDown={() => settray(false)} tabIndex={0}>
+          <i className="fa-solid fa-bars" />
+        </span>
       </div>
       <div id="navbar" className={tray ? 'block' : 'show'} role="button" onClick={() => settray(true)} onKeyDown={() => settray(false)} tabIndex={0}>
         <div className="top">
@@ -30,7 +38,8 @@ function Navbar() {
               <Link to="delete">Delete Car</Link>
             </li>
             <li>
-              <Link to="login">sign in</Link>
+              {localStorage.getItem('token') ? <Link to="login" onClick={signout}>sign out</Link> : <Link to="login">sign In</Link> }
+
             </li>
           </ul>
         </div>
