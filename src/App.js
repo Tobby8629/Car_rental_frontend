@@ -6,6 +6,8 @@ import Reserve from './components/Reserve';
 import MyReservation from './components/MyReservation';
 import AddCar from './components/AddCar';
 import DeleteCar from './components/DeleteCar';
+import Login from './components/login';
+import Signup from './components/Signup';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="myreserve" element={<MyReservation />} />
         <Route path="add" element={<AddCar />} />
         <Route path="delete" element={<DeleteCar />} />
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<Signup />} />
       </Routes>
     </div>
   );
