@@ -78,6 +78,13 @@
   margin: 1.5em 0;
 }
 
+.red {
+  color: rgb(246, 63, 63);
+  font-weight: 300;
+  font-size: 12px;
+  display: none;
+}
+
 @media (min-width: 768px) {
   .form {
     z-index: 999;
