@@ -16,7 +16,7 @@ function Login() {
     setTimeout(() => {
       const token = localStorage.getItem('token');
       resolve(token);
-    }, 1000);
+    }, 2000);
   });
 
   const submit = async (e) => {

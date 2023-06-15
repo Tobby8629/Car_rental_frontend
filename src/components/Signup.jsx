@@ -13,7 +13,7 @@ function Signup() {
     setTimeout(() => {
       const token = localStorage.getItem('success');
       resolve(token);
-    }, 1000);
+    }, 2000);
   });
 
   const submit = async (e) => {
