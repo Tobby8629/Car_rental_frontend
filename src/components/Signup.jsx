@@ -1,27 +1,43 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './componentsCss/login.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { postUser } from './Redux/UserSlice';
 
 function Signup() {
-  const [user,setuser] = useState({username: "", email:""})
-  const dispatch = useDispatch()
+  const [user, setuser] = useState({ username: '', email: '' });
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const submit = (e) => {
+  const getmessage = async () => new Promise((resolve) => {
+    setTimeout(() => {
+      const token = localStorage.getItem('success');
+      resolve(token);
+    }, 1000);
+  });
+
+  const submit = async (e) => {
     e.preventDefault();
-    if(user.email === '' || user.username === '') {
-      return
+    if (user.email === '' || user.username === '') {
+      return;
     }
-    dispatch(postUser({username: user.username}))
-  }
+    dispatch(postUser({ username: user.username }));
+    const token = await getmessage();
+    if (token) {
+      navigate('/login', { replace: true });
+      localStorage.removeItem('success');
+    } else {
+      e.target.querySelector('.red').style.display = 'block';
+    }
+  };
 
   return (
     <div className="form sign">
       <form onSubmit={submit}>
         <h2>Sign up</h2>
-        <input type="text" id="username" value={user.username} placeholder="username" onChange={(e)=>setuser({...user, username:e.target.value})} />
-        <input type="email" id="email" value={user.email} placeholder="email" onChange={(e)=>setuser({...user, email: e.target.value})} />
+        <input type="text" id="username" value={user.username} placeholder="username" onChange={(e) => setuser({ ...user, username: e.target.value })} />
+        <input type="email" id="email" value={user.email} placeholder="email" onChange={(e) => setuser({ ...user, email: e.target.value })} />
+        <div className="red">username has been taken</div>
         <div className="form-btn">
           <button type="submit">Sign up</button>
         </div>
