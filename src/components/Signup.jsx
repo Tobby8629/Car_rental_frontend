@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './componentsCss/login.css';
 import { useDispatch } from 'react-redux';
-import { postUser } from './Redux/UserSlice';
+import { postUser } from '../Redux/UserSlice';
 
 function Signup() {
   const [user, setuser] = useState({ username: '', email: '' });
