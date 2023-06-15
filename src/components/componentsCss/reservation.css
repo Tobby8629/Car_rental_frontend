@@ -1,0 +1,25 @@
+section {
+  padding: 0;
+  color: white;
+}
+
+section .reservation {
+  background-image: linear-gradient(rgba(93, 228, 125, 0.575),rgba(93, 228, 125, 0.575)), url('../assets/reservation.jpg');
+}
+
+.reservation input {
+  text-transform: capitalize;
+}
+
+#date {
+  text-transform: uppercase;
+}
+
+ section .reservation form {
+  width: 90%;
+}
+
+section .reservation form button {
+  color: white;
+  border-color: yellowgreen;
+}

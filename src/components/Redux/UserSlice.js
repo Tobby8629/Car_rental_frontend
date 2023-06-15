@@ -48,13 +48,13 @@ const Userslice = createSlice({
     builder.addCase(postUser.fulfilled, (state, action) => {
       state.regsuccess = action.payload;
       if (action.payload.token) {
-        localStorage.setItem('success', JSON.stringify(action.payload.token));
+        localStorage.setItem('success', JSON.stringify(action.payload));
       }
     });
     builder.addCase(logUser.fulfilled, (state, action) => {
       state.loginpass = action.payload;
       if (action.payload.token) {
-        localStorage.setItem('token', JSON.stringify(action.payload.token));
+        localStorage.setItem('token', JSON.stringify(action.payload));
       }
     });
   },
