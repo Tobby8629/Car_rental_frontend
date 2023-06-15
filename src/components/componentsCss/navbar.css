@@ -73,11 +73,11 @@
   text-transform: uppercase;
 }
 
-.top a:active {
+.top li:active a {
   color: white;
 }
 
-.top a:hover {
+.top li:hover a {
   color: rgb(255, 254, 254);
 }
 
