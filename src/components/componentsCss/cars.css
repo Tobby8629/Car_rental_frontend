@@ -34,6 +34,10 @@
   margin: 10px 0;
 }
 
+.each h4 {
+  text-align: center;
+}
+
 .each p {
   text-align: center;
   line-height: 25px;
