@@ -1,0 +1,124 @@
+.bars {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(186, 183, 183, 0.177);
+  backdrop-filter: blur(25px);
+  padding: 1rem;
+  z-index: 9;
+}
+
+.bars i,
+.cancel i {
+  font-size: 2rem;
+}
+
+#navbar {
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(186, 183, 183, 0);
+  backdrop-filter: blur(25px);
+  padding: 1rem 0;
+  padding-left: 1rem;
+  transition: 0.5s;
+  z-index: 99;
+}
+
+.block {
+  left: -100%;
+}
+
+.show {
+  left: 0;
+}
+
+.top h2 {
+  margin-bottom: 6rem;
+  text-align: left;
+  font-size: 15px;
+}
+
+.top li {
+  text-align: left;
+  margin: 0.5rem 0;
+  padding: 10px 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  transition: 0.3s linear;
+}
+
+.socials li {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.top li:active {
+  background-color: greenyellow;
+  padding: 10px;
+}
+
+.top li:hover {
+  background-color: greenyellow;
+  padding: 10px;
+}
+
+.top a {
+  text-align: left;
+  font-size: 1rem;
+  color: rgb(61, 61, 61);
+  outline: none;
+  text-transform: uppercase;
+}
+
+.top a:active {
+  color: white;
+}
+
+.top a:hover {
+  color: rgb(255, 254, 254);
+}
+
+.socials ul {
+  display: flex;
+}
+
+.cancel {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+@media (min-width: 768px) {
+  #navbar {
+    width: 23%;
+    position: fixed;
+    left: 0;
+    padding: 2rem 0;
+    padding-left: 2rem;
+    box-shadow: 0 0 10px 0 rgb(200, 200, 200);
+  }
+
+  .show,
+  .block {
+    left: 0;
+  }
+
+  .top a {
+    font-size: 1.2rem;
+  }
+
+  .top li:active {
+    background-color: greenyellow;
+
+    /* padding:1.2rem 2.5rem; */
+  }
+
+  .top li:hover {
+    background-color: greenyellow;
+
+    /* padding: 1.2rem 2.5rem; */
+  }
+}
