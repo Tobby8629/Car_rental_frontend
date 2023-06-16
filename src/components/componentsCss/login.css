@@ -91,7 +91,7 @@
   }
 
   .form form {
-    width: 50%;
+    width: 60%;
     padding: 0.5rem 2rem;
   }
 
@@ -121,5 +121,11 @@
   .sign form {
     width: 70%;
     padding: 3rem 8rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .form form {
+    width: 50%;
   }
 }

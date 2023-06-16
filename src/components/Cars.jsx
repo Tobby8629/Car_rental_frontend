@@ -61,7 +61,7 @@ function Cars() {
   const first = last - perpage;
   const each = cars.slice(first, last);
   const next = () => {
-    if (car >= Math.floor(cars.length / 3)) {
+    if (car >= Math.round(cars.length / 3)) {
       setbuttondis(true);
     } else {
       setbuttondis(false);
