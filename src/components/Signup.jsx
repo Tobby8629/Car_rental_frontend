@@ -21,14 +21,29 @@ function Signup() {
     if (user.email === '' || user.username === '') {
       return;
     }
-    dispatch(postUser({ username: user.username }));
-    const token = await getmessage();
-    if (token) {
-      navigate('/login', { replace: true });
-      localStorage.removeItem('success');
-    } else {
-      e.target.querySelector('.red').style.display = 'block';
+
+    try {
+      await  dispatch(postUser({ username: user.username }));
+      const token = await getmessage();
+  
+      if (token) {
+        navigate('/login', { replace: true });
+        localStorage.removeItem('success');
+      } else {
+        e.target.querySelector('.red').style.display = 'block';
+      }
+    } catch (error) {
+      // Handle any errors from the dispatch or getTokenFromLocalStorage
+      console.error(error);
     }
+    // dispatch(postUser({ username: user.username }));
+    // const token = await getmessage();
+    // if (token) {
+    //   navigate('/login', { replace: true });
+    //   localStorage.removeItem('success');
+    // } else {
+    //   e.target.querySelector('.red').style.display = 'block';
+    // }
   };
 
   return (
