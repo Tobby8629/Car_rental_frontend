@@ -3,7 +3,7 @@ section {
 }
 
 section .reservation {
-  background-image: linear-gradient(rgba(93, 228, 125, 0.575),rgba(93, 228, 125, 0.575)), url('../assets/reservation.jpg');
+  background-image: linear-gradient(rgba(93, 228, 125, 0.575), rgba(93, 228, 125, 0.575)), url('../assets/reservation.jpg');
   color: white;
 }
 
@@ -22,7 +22,7 @@ section .reservation {
   text-transform: uppercase;
 }
 
- section .reservation form {
+section .reservation form {
   width: 90%;
 }
 
@@ -33,39 +33,39 @@ section .reservation form button {
 
 .reservation .red {
   color: red;
-  margin: .8rem;
+  margin: 0.8rem;
 }
 
 .redone {
   color: red;
-  margin: .8rem;
+  margin: 0.8rem;
   display: none;
   font-size: 18px;
   font-weight: 300;
 }
 
-@media (min-width:768px) {
-    section .reservation form {
-      width: 80%;
-    }
+@media (min-width: 768px) {
+  section .reservation form {
+    width: 80%;
+  }
 
-    section .reservation h2 {
-     font-size: 1.8rem;
-    }
+  section .reservation h2 {
+    font-size: 1.8rem;
+  }
 
-     section .reservation form input,
-     .reservation select {
-      padding: .5rem;
-     }
+  section .reservation form input,
+  .reservation select {
+    padding: 0.5rem;
+  }
 }
 
 @media (min-width: 768px) {
+  section .reservation form {
+    width: 70%;
+  }
 
-    section .reservation form {
-        width: 70%;
-      }
-    section .reservation form input,
-     .reservation select {
-      padding: 1rem;
-     }
+  section .reservation form input,
+  .reservation select {
+    padding: 1rem;
+  }
 }

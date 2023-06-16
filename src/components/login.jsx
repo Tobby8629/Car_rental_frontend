@@ -24,11 +24,11 @@ function Login() {
     if (user.username === '') {
       return;
     }
-  
+
     try {
       await dispatch(logUser(user));
       const token = await getTokenFromLocalStorage();
-  
+
       if (token) {
         navigate(redirectpath, { replace: true });
       } else {

@@ -5,7 +5,7 @@ export const createReserve = createAsyncThunk('reserve/createReserve', async (pa
     city: payload.city,
     pick_up: payload.pickup,
     return_date: payload.return,
-    car_id: payload.car
+    car_id: payload.car,
   };
   const response = await fetch(
     'https://che-v1m0.onrender.com/api/v1/reservations',
@@ -42,4 +42,3 @@ const ReservationSlice = createSlice({
 });
 
 export default ReservationSlice.reducer;
-
