@@ -1,6 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
-import './componentsCss/delete.css'
+import React, { useState } from 'react';
+import './componentsCss/delete.css';
 
 function DeleteCar() {
   const cars = [
@@ -122,8 +121,8 @@ function DeleteCar() {
   };
 
   return (
-    <section className='delete'>
-       <div className="header">
+    <section className="delete">
+      <div className="header">
         <h3>Here is the List of all your Cars</h3>
       </div>
 
@@ -133,14 +132,20 @@ function DeleteCar() {
             <div className="image">
               <img src={e.image} alt={e.name} />
             </div>
-            <div className='text'>
+            <div className="text">
               <h4>{e.name}</h4>
-              <div className='price'>
-               <div>
-                  <h5>Price: ${e.price}</h5>
-                  <h5>Year: {e.year}</h5>
+              <div className="price">
+                <div>
+                  <h5>
+                    Price: $
+                    {e.price}
+                  </h5>
+                  <h5>
+                    Year:
+                    {e.year}
+                  </h5>
                 </div>
-                <button type='button'>Delete</button> 
+                <button type="button">Delete</button>
               </div>
             </div>
           </div>

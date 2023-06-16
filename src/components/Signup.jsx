@@ -23,9 +23,9 @@ function Signup() {
     }
 
     try {
-      await  dispatch(postUser({ username: user.username }));
+      await dispatch(postUser({ username: user.username }));
       const token = await getmessage();
-  
+
       if (token) {
         navigate('/login', { replace: true });
         localStorage.removeItem('success');

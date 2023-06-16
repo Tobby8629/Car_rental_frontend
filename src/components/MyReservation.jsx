@@ -1,6 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
-import './componentsCss/delete.css'
+import React, { useState } from 'react';
+import './componentsCss/delete.css';
 import { Link } from 'react-router-dom';
 
 function DeleteCar() {
@@ -12,10 +11,10 @@ function DeleteCar() {
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
       year: 2022,
       image: 'car1.jpg',
-      city:'lagos',
+      city: 'lagos',
       date: '12-2-12',
       returndate: '12-3-12',
-      pickup: 'ikeja'
+      pickup: 'ikeja',
     },
     {
       id: 2,
@@ -27,7 +26,7 @@ function DeleteCar() {
       city: 'lagos',
       date: '12-2-12',
       returndate: '12-3-12',
-      pickup: 'lekki'
+      pickup: 'lekki',
     },
     {
       id: 3,
@@ -36,10 +35,10 @@ function DeleteCar() {
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
       year: 2022,
       image: 'car3.jpg',
-      city:'Ibadan',
+      city: 'Ibadan',
       date: '12-2-12',
       returndate: '12-3-12',
-      pickup: 'ojo'
+      pickup: 'ojo',
     },
     {
       id: 4,
@@ -48,10 +47,10 @@ function DeleteCar() {
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       year: 2022,
       image: 'car4.jpg',
-      city:'Abeokuta',
+      city: 'Abeokuta',
       date: '12-2-12',
       returndate: '12-3-12',
-      pickup: 'Ibara'
+      pickup: 'Ibara',
     },
     {
       id: 5,
@@ -60,10 +59,10 @@ function DeleteCar() {
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       year: 2022,
       image: 'car5.jpg',
-      city:'surulere',
+      city: 'surulere',
       date: '12-2-12',
       returndate: '12-3-12',
-      pickup: 'masha'
+      pickup: 'masha',
     },
     {
       id: 6,
@@ -72,10 +71,10 @@ function DeleteCar() {
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       year: 2022,
       image: 'car6.jpg',
-      city:'Abuja',
+      city: 'Abuja',
       date: '12-2-12',
       returndate: '12-3-12',
-      pickup: 'Gwaranpa'
+      pickup: 'Gwaranpa',
     },
   ];
 
@@ -107,8 +106,8 @@ function DeleteCar() {
   };
 
   return (
-    <section className='delete myreserve'>
-       <div className="header">
+    <section className="delete myreserve">
+      <div className="header">
         <h3>Here is the List of Reservations</h3>
       </div>
 
@@ -118,19 +117,31 @@ function DeleteCar() {
             <div className="image">
               <img src={e.image} alt={e.name} />
             </div>
-            <div className='text'>
+            <div className="text">
               <h4>{e.name}</h4>
-              <div className='price'>
-               <div>
-                  <h5>city: <span className='small'>{e.city}</span></h5>
-                  <h5>pickup: <span className='small'>{e.pickup}</span></h5>
+              <div className="price">
+                <div>
+                  <h5>
+                    city:
+                    <span className="small">{e.city}</span>
+                  </h5>
+                  <h5>
+                    pickup:
+                    <span className="small">{e.pickup}</span>
+                  </h5>
                 </div>
                 <div>
-                  <h5>date: <span className='small'>{e.date}</span></h5>
-                  <h5>return date: <span className='small'>{e.returndate}</span></h5>
+                  <h5>
+                    date:
+                    <span className="small">{e.date}</span>
+                  </h5>
+                  <h5>
+                    return date:
+                    <span className="small">{e.returndate}</span>
+                  </h5>
                 </div>
               </div>
-              <button type='button'>cancel reservation</button> 
+              <button type="button">cancel reservation</button>
             </div>
           </div>
         ))}
@@ -143,7 +154,7 @@ function DeleteCar() {
           next
         </button>
         <button className="next" type="button">
-          <Link to='/reserve'>Add Reservation</Link>
+          <Link to="/reserve">Add Reservation</Link>
         </button>
       </div>
     </section>
