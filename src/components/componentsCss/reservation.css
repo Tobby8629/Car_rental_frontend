@@ -1,10 +1,10 @@
 section {
   padding: 0;
-  color: white;
 }
 
 section .reservation {
   background-image: linear-gradient(rgba(93, 228, 125, 0.575),rgba(93, 228, 125, 0.575)), url('../assets/reservation.jpg');
+  color: white;
 }
 
 .reservation input {
