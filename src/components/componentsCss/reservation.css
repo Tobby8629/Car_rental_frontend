@@ -11,6 +11,13 @@ section .reservation {
   text-transform: capitalize;
 }
 
+.reservation select {
+  width: 100%;
+  padding: 1rem;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
 #date {
   text-transform: uppercase;
 }
@@ -22,4 +29,17 @@ section .reservation {
 section .reservation form button {
   color: white;
   border-color: yellowgreen;
+}
+
+.reservation .red {
+  color: red;
+  margin: .8rem;
+}
+
+.redone {
+  color: red;
+  margin: .8rem;
+  display: none;
+  font-size: 18px;
+  font-weight: 300;
 }
