@@ -43,3 +43,29 @@ section .reservation form button {
   font-size: 18px;
   font-weight: 300;
 }
+
+@media (min-width:768px) {
+    section .reservation form {
+      width: 80%;
+    }
+
+    section .reservation h2 {
+     font-size: 1.8rem;
+    }
+
+     section .reservation form input,
+     .reservation select {
+      padding: .5rem;
+     }
+}
+
+@media (min-width: 768px) {
+
+    section .reservation form {
+        width: 70%;
+      }
+    section .reservation form input,
+     .reservation select {
+      padding: 1rem;
+     }
+}

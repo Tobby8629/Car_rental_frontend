@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './componentsCss/reservation.css';
+import { createReserve } from './Redux/ReservationSlice';
+import { useNavigate } from 'react-router';
 
 function Reservation() {
   // const cars = useSelector((state)=> state.Cars.cars)
   const storage = localStorage.getItem('token');
-  const user = JSON.parse(storage);
+  const user = JSON.parse(storage)
   const cars = [
     {
       id: 1,
@@ -57,8 +59,11 @@ function Reservation() {
     },
   ];
 
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
   const [reserve, setreserve] = useState({
-    userId: user.id, city: '', pickup: '', date: '', returnDate: '', carId: '',
+    userId: user.id, city: '', pickup: '', date: '', returnDate: '', carId: 1,
   });
 
   const submit = async (e) => {
@@ -77,14 +82,17 @@ function Reservation() {
       return
     }
 
-    console.log(reserve)
+    try {
+      await dispatch(createReserve({ user: reserve.userId, city: reserve.city, pickup: reserve.pickup,
+         date: reserve.date, car: reserve.carId, return: reserve.returnDate,}));
+        navigate('/');
+    } catch (error) {
+      // Handle any errors from the dispatch or getTokenFromLocalStorage
+      console.error(error);
+    }
+   
 
-    // dispatch(postUser({
-    //   reserve: {
-    //     user: reserve.userId, city: reserve.city, pickup: reserve.pickup,
-    //    date: reserve.date, car: reserve.carId, return: reserve.return_date,
-    //   },
-    // }));
+
   };
   return (
     <section>
