@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const baseUrl = 'https://che-v1m0.onrender.com/api/v1';
+const baseUrl = 'https://ed-68aw.onrender.com/api/v1';
 
 export const AddnewCar = createAsyncThunk(
   'api/AddnewCar',
