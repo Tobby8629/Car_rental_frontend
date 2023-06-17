@@ -126,12 +126,15 @@
     display: flex;
     height: 100vh;
     padding: 1rem;
-    text-align: right;
     position: relative;
   }
 
   .details h1 {
     text-align: right;
+  }
+
+  .details li {
+    font-size: 20px;
   }
 
   .details .image {
