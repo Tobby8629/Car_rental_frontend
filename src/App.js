@@ -9,14 +9,15 @@ import DeleteCar from './components/DeleteCar';
 import Login from './components/login';
 import Signup from './components/Signup';
 import PrivateRoute from './components/PrivateRoute';
+import CarDetails from './components/CarDetails';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Cars />} />
         <Route path="/" element={<PrivateRoute />}>
+          <Route path="/" element={<Cars />} />
           <Route path="reserve" element={<Reserve />} />
           <Route path="myreserve" element={<MyReservation />} />
           <Route path="add" element={<AddCar />} />
@@ -24,6 +25,7 @@ function App() {
         </Route>
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
+        <Route path="/:carId" element={<CarDetails />} />
       </Routes>
     </div>
   );
