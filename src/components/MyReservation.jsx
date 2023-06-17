@@ -123,21 +123,33 @@ function DeleteCar() {
                 <div>
                   <h5>
                     city:
-                    <span className="small">{e.city}</span>
+                    <span className="small">
+                      {' '}
+                      {e.city}
+                    </span>
                   </h5>
                   <h5>
                     pickup:
-                    <span className="small">{e.pickup}</span>
+                    <span className="small">
+                      {' '}
+                      {e.pickup}
+                    </span>
                   </h5>
                 </div>
                 <div>
                   <h5>
                     date:
-                    <span className="small">{e.date}</span>
+                    <span className="small">
+                      {' '}
+                      {e.date}
+                    </span>
                   </h5>
                   <h5>
                     return date:
-                    <span className="small">{e.returndate}</span>
+                    <span className="small">
+                      {' '}
+                      {e.returndate}
+                    </span>
                   </h5>
                 </div>
               </div>

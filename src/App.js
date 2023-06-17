@@ -9,6 +9,7 @@ import DeleteCar from './components/DeleteCar';
 import Login from './components/login';
 import Signup from './components/Signup';
 import PrivateRoute from './components/PrivateRoute';
+import CarDetails from './components/CarDetails';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         </Route>
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
+        <Route path="/:carId" element={<CarDetails />} />
       </Routes>
     </div>
   );
