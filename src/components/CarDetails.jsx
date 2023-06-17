@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import './componentsCss/cars.css';
-import { Link } from 'react-router-dom';
+/* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
+import './componentsCss/details.css';
+import { BiLeftArrow } from 'react-icons/bi';
+import 'react-circular-progressbar/dist/styles.css';
+import { Link, useParams } from 'react-router-dom';
 
-function Cars() {
+const CarDetails = () => {
   const cars = [
     {
       id: 1,
@@ -53,70 +56,64 @@ function Cars() {
       image: 'car6.jpg',
     },
   ];
-
-  const [buttondis, setbuttondis] = useState(false);
-  const [prevdis, setprev] = useState(false);
-  const [car, setcar] = useState(1);
-  const perpage = 3;
-  const last = car * perpage;
-  const first = last - perpage;
-  const each = cars.slice(first, last);
-  const next = () => {
-    if (car >= Math.round(cars.length / 3)) {
-      setbuttondis(true);
-    } else {
-      setbuttondis(false);
-      setcar(car + 1);
-      setprev(false);
-    }
-  };
-
-  const prev = () => {
-    if (car <= 1) {
-      setprev(true);
-    } else {
-      setprev(false);
-      setcar(car - 1);
-      setbuttondis(false);
-    }
-  };
-
+  const { carId } = useParams();
+  const data = cars.find((e) => e.id === parseInt(carId, 10));
+  console.log(data);
   return (
-    <section className="cars">
-      <div className="header">
-        <h2>Need a Car to rent ?</h2>
-        <p>checkout our available cars</p>
+    <section className="details">
+      <h1 className="mobile">{data.name}</h1>
+      <div className="image">
+        <img src={data.image} alt={data.name} />
       </div>
-
-      <div className="all">
-        {each.map((e) => (
-          <div className="each" key={e.name}>
-            <div className="image">
-              <img src={e.image} alt={e.name} />
-            </div>
-            <Link to={`/${e.id}`} className="link">{e.name}</Link>
-            <p>
-              {e.description.split(' ').slice(0, 15).join(' ')}
-              . . .
-            </p>
-            <ul>
-              <li><i className="fa-brands fa-twitter" /></li>
-              <li><i className="fa-brands fa-facebook-f" /></li>
-              <li><i className="fa-brands fa-instagram" /></li>
-            </ul>
+      <div className="container">
+        <div className="wrap">
+          <div className="desktop">
+            <h1>{data.name}</h1>
           </div>
-        ))}
+          <ul>
+            <li>
+              Rental price: $
+              {data.price}
+            </li>
+            <li>
+              Car year:
+              {data.year}
+            </li>
+            <li>
+              Car model:
+              {data.transmission}
+            </li>
+            <li>
+              car manufacturer:
+              {data.manufacture}
+            </li>
+            <li>
+              Car owner:
+              {data.owner}
+              {' '}
+              tobby
+            </li>
+          </ul>
+          <div className="col">
+            <Link to="/" style={{ textTransform: 'uppercase', color: 'black' }}>
+              Discover More Models
+              <span><i className="fa-solid fa-angle-right" /></span>
+            </Link>
+            <div className="circle">
+              <div className="smallcircle" />
+            </div>
+          </div>
+        </div>
+        <button type="button" className="btt">
+          <Link to="/reservee"> Reserve </Link>
+          <span><i className="fa-solid fa-angle-right" /></span>
+        </button>
       </div>
-      <div className="btn">
-        <button className="prev" type="button" disabled={prevdis} onClick={prev}>
-          <i className="fa-solid fa-caret-left" />
-        </button>
-        <button className="next" type="button" disabled={buttondis} onClick={next}>
-          <i className="fa-solid fa-caret-right" />
-        </button>
+      <div className="absolute">
+        <Link to="/"><BiLeftArrow fill="white" size={30} /></Link>
       </div>
     </section>
   );
-}
+};
 
-export default Cars;
+export default CarDetails;

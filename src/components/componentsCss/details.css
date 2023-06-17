@@ -1,0 +1,147 @@
+.details {
+  padding: 5rem 1rem;
+}
+
+.details h1 {
+  text-align: center;
+  margin: 1rem 0;
+  text-transform: capitalize;
+}
+
+.details .image {
+  height: 100%;
+}
+
+.details .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.details ul {
+  border-radius: 3px;
+  margin: 1rem 0;
+}
+
+.details ul li:nth-child(even) {
+  padding: 0.5rem;
+}
+
+.details ul li:nth-child(odd) {
+  background-color: rgb(180, 180, 180);
+  color: white;
+  padding: 0.5rem;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 10px;
+  background:
+    conic-gradient(
+      #f00 0%,
+      #f00 5%,
+      #f80 5%,
+      #f80 10%,
+      #ff0 10%,
+      #ff0 15%,
+      #f08 15%,
+      #f08 20%,
+      #f00 20%,
+      #f00 25%,
+      #0f8 25%,
+      #0f8 30%,
+      #0ff 30%,
+      #0ff 35%,
+      #08f 35%,
+      #08f 40%,
+      #00f 40%,
+      #00f 45%,
+      #80f 45%,
+      #80f 50%,
+      #f0f 50%,
+      #f0f 55%,
+      #8f0 55%,
+      #8f0 60%,
+      #0f0 60%,
+      #0f0 100%
+    );
+}
+
+.smallcircle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.col a {
+  display: flex;
+  align-items: center;
+}
+
+.btt a,
+.btt span {
+  color: white;
+}
+
+.col a span {
+  margin-right: 10px;
+  font-size: 18px;
+  color: rgb(0, 177, 0);
+}
+
+.col a span i {
+  margin-left: 5px;
+}
+
+.btt {
+  background-color: rgb(0, 177, 0);
+  border: none;
+  padding: 0.7rem;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .details {
+    display: flex;
+    height: 100vh;
+    padding: 1rem 2rem;
+  }
+
+  .details h1 {
+    text-align: left;
+  }
+
+  .image {
+    width: 60%;
+    height: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details .image img {
+    width: 100%;
+    border-radius: 0;
+  }
+}
