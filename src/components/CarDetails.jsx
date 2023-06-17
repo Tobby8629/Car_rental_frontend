@@ -59,7 +59,7 @@ const CarDetails = () => {
   ];
   const { carId } = useParams();
   const data = cars.find((e) => e.id === parseInt(carId, 10));
-  console.log(data);
+
   return (
     <section className="details">
       <h1 className="mobile">{data.name}</h1>

@@ -4,7 +4,7 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 const CircularprogressBar = ({ percentage }) => (
-  <div style={{ width: '100px' }} className='cirl'>
+  <div style={{ width: '100px' }} className="cirl">
     <CircularProgressbar
       value={percentage}
       text={`${percentage}%`}
