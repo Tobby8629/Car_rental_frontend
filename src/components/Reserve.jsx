@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import './componentsCss/reservation.css';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { createReserve } from './Redux/ReservationSlice';
 
 function Reservation() {
