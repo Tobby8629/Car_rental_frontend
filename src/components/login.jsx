@@ -16,7 +16,7 @@ function Login() {
     setTimeout(() => {
       const token = localStorage.getItem('token');
       resolve(token);
-    }, 1000);
+    }, 2000);
   });
 
   const submit = async (e) => {
@@ -24,12 +24,19 @@ function Login() {
     if (user.username === '') {
       return;
     }
-    dispatch(logUser(user));
-    const token = await getTokenFromLocalStorage();
-    if (token) {
-      navigate(redirectpath, { replace: true });
-    } else {
-      e.target.querySelector('.red').style.display = 'block';
+
+    try {
+      await dispatch(logUser(user));
+      const token = await getTokenFromLocalStorage();
+
+      if (token) {
+        navigate(redirectpath, { replace: true });
+      } else {
+        e.target.querySelector('.red').style.display = 'block';
+      }
+    } catch (error) {
+      // Handle any errors from the dispatch or getTokenFromLocalStorage
+      console.error(error);
     }
   };
 

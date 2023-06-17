@@ -38,8 +38,7 @@ function Navbar() {
               <Link to="delete">Delete Car</Link>
             </li>
             <li>
-              {localStorage.getItem('token') ? <Link to="login" onClick={signout}>sign out</Link> : <Link to="login">sign In</Link> }
-
+              <Link to="login" onClick={signout}>sign out</Link>
             </li>
           </ul>
         </div>
