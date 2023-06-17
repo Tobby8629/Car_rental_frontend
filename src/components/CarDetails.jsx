@@ -78,18 +78,26 @@ const CarDetails = () => {
             </li>
             <li>
               Car year:
+              {' '}
+              {' '}
               {data.year}
             </li>
             <li>
               Car model:
+              {' '}
+              {' '}
               {data.transmission}
             </li>
             <li>
               car manufacturer:
+              {' '}
+              {' '}
               {data.manufacture}
             </li>
             <li>
               Car owner:
+              {' '}
+              {' '}
               {data.owner}
               {' '}
               tobby

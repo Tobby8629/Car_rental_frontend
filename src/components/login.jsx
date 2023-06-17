@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './componentsCss/login.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { logUser } from './Redux/UserSlice';
+import { logUser } from '../Redux/UserSlice';
 
 function Login() {
   const [user, setuser] = useState('');

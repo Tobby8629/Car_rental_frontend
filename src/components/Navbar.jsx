@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './componentsCss/navbar.css';
 import { useDispatch } from 'react-redux';
-import { logout } from './Redux/UserSlice';
+import { logout } from '../Redux/UserSlice';
 
 function Navbar() {
   const dispatch = useDispatch();
