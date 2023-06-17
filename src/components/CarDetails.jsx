@@ -4,6 +4,7 @@ import './componentsCss/details.css';
 import { BiLeftArrow } from 'react-icons/bi';
 import 'react-circular-progressbar/dist/styles.css';
 import { Link, useParams } from 'react-router-dom';
+import CircularprogressBar from './CircularprogressBar';
 
 const CarDetails = () => {
   const cars = [
@@ -99,9 +100,7 @@ const CarDetails = () => {
               Discover More Models
               <span><i className="fa-solid fa-angle-right" /></span>
             </Link>
-            <div className="circle">
-              <div className="smallcircle" />
-            </div>
+            <CircularprogressBar percentage={90} />
           </div>
         </div>
         <button type="button" className="btt">
@@ -109,9 +108,9 @@ const CarDetails = () => {
           <span><i className="fa-solid fa-angle-right" /></span>
         </button>
       </div>
-      <div className="absolute">
+      <button className="next" type="button">
         <Link to="/"><BiLeftArrow fill="white" size={30} /></Link>
-      </div>
+      </button>
     </section>
   );
 };

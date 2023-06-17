@@ -48,30 +48,24 @@
   background:
     conic-gradient(
       #f00 0%,
-      #f00 5%,
-      #f80 5%,
+      #f00 10%,
       #f80 10%,
-      #ff0 10%,
-      #ff0 15%,
-      #f08 15%,
-      #f08 20%,
-      #f00 20%,
-      #f00 25%,
-      #0f8 25%,
-      #0f8 30%,
-      #0ff 30%,
-      #0ff 35%,
-      #08f 35%,
-      #08f 40%,
-      #00f 40%,
-      #00f 45%,
-      #80f 45%,
-      #80f 50%,
-      #f0f 50%,
-      #f0f 55%,
-      #8f0 55%,
-      #8f0 60%,
-      #0f0 60%,
+      #ff0 20%,
+      #ff0 20%,
+      #f08 30%,
+      #f00 30%,
+      #f00 40%,
+      #0f8 40%,
+      #0f8 50%,
+      #0ff 50%,
+      #0ff 60%,
+      #08f 60%,
+      #08f 70%,
+      #00f 70%,
+      #00f 80%,
+      #80f 80%,
+      #8f0 90%,
+      #8f0 90%,
       #0f0 100%
     );
 }
@@ -118,14 +112,16 @@
   .details {
     display: flex;
     height: 100vh;
-    padding: 1rem 2rem;
+    padding: 1rem;
+    text-align: right;
+    position: relative;
   }
 
   .details h1 {
-    text-align: left;
+    text-align: right;
   }
 
-  .image {
+  .details .image {
     width: 60%;
     height: 70%;
     margin: auto;
@@ -135,13 +131,75 @@
   }
 
   .container {
-    width: 30%;
+    width: 35%;
+    height: 90%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 5rem;
   }
 
   .details .image img {
     width: 100%;
     border-radius: 0;
+  }
+
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .details h1,
+  .details ul,
+  .col {
+    margin: 1.5rem 0;
+  }
+
+  .col {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+
+  .col .circle {
+    width: 100px;
+    margin: 1rem 0;
+    margin-left: auto;
+  }
+
+  .smallcircle {
+    width: 65px;
+  }
+
+  .cirl {
+    margin: 1rem 0;
+    margin-left: auto;
+  }
+
+  .col a {
+    font-weight: 700;
+    font-size: 12px;
+    margin-left: auto;
+  }
+
+  .btt {
+    padding: 1rem;
+    border-radius: 30px;
+  }
+
+  .details .next{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+  }
+}
+@media (min-width: 1000px) {
+  .btt {
+    width: 200px;
+    margin: auto;
+  }
+  .col .circle {
+    margin: 1rem 0;
+    margin-left: auto;
   }
 }
