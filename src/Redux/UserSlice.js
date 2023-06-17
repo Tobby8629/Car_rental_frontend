@@ -4,7 +4,7 @@ export const postUser = createAsyncThunk('api/postUser', async (payload) => {
   const data = {
     username: payload.username,
   };
-  const response = await fetch('https://che-v1m0.onrender.com/api/v1/register',
+  const response = await fetch('https://ed-68aw.onrender.com/api/v1/register',
     {
       method: 'post',
       headers: { 'content-type': 'application/json' },
@@ -19,7 +19,7 @@ export const logUser = createAsyncThunk('api/logUser', async (payload) => {
     username: payload,
   };
   const response = await fetch(
-    'https://che-v1m0.onrender.com/api/v1/login',
+    'https://ed-68aw.onrender.com/api/v1/login',
     {
       method: 'post',
       headers: { 'content-type': 'application/json' },
