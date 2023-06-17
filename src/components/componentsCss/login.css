@@ -78,14 +78,21 @@
   margin: 1.5em 0;
 }
 
+.red {
+  color: rgb(246, 63, 63);
+  font-weight: 300;
+  font-size: 18px;
+  display: none;
+}
+
 @media (min-width: 768px) {
   .form {
     z-index: 999;
   }
 
   .form form {
-    width: 40%;
-    padding: 0.5rem 4rem;
+    width: 60%;
+    padding: 0.5rem 2rem;
   }
 
   .form h2 {
@@ -114,5 +121,11 @@
   .sign form {
     width: 70%;
     padding: 3rem 8rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .form form {
+    width: 50%;
   }
 }
