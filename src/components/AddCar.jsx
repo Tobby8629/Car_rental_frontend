@@ -4,13 +4,15 @@ import { AddnewCar } from '../Redux/CarSlice';
 
 const AddCar = () => {
   const dispatch = useDispatch();
-  // const { cars } = useSelector((state) => state.cars);
+  const storage = localStorage.getItem('token');
+  const user = JSON.parse(storage);
   const [carDatas, setCarDatas] = useState({
     name: '',
     description: '',
     photo: '',
     price: '',
     model: '',
+    user_id: user.id,
   });
 
   const [success, setSuccess] = useState('');
