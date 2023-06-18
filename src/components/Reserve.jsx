@@ -1,69 +1,19 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './componentsCss/reservation.css';
 import { useNavigate } from 'react-router-dom';
 import { createReserve } from '../Redux/ReservationSlice';
 
 function Reservation() {
-  // const cars = useSelector((state)=> state.Cars.cars)
+  const cars = useSelector((state) => state.Cars.cars);
   const storage = localStorage.getItem('token');
   const user = JSON.parse(storage);
-  const cars = [
-    {
-      id: 1,
-      name: 'range rover',
-      price: 2000,
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
-      year: 2022,
-      image: 'car1.jpg',
-    },
-    {
-      id: 2,
-      name: 'mercedes',
-      price: 2000,
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
-      year: 2022,
-      image: 'car2.jpg',
-    },
-    {
-      id: 3,
-      name: 'chevrolet',
-      price: 2000,
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
-      year: 2022,
-      image: 'car3.jpg',
-    },
-    {
-      id: 4,
-      name: 'dodge',
-      price: 2000,
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      year: 2022,
-      image: 'car4.jpg',
-    },
-    {
-      id: 5,
-      name: 'porshe',
-      price: 2000,
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      year: 2022,
-      image: 'car5.jpg',
-    },
-    {
-      id: 6,
-      name: 'bentley',
-      price: 2000,
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      year: 2022,
-      image: 'car6.jpg',
-    },
-  ];
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [reserve, setreserve] = useState({
-    userId: user.id, city: '', pickup: '', date: '', returnDate: '', carId: 1,
+    userId: user.id, city: '', pickup: '', date: '', returnDate: '', carId: '',
   });
 
   const submit = async (e) => {
