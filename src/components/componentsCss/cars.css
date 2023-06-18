@@ -105,6 +105,7 @@
 
   .all {
     display: flex;
+    align-items: center;
   }
 
   .cars h2 {

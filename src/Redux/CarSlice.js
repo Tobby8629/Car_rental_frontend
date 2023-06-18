@@ -21,8 +21,24 @@ export const AddnewCar = createAsyncThunk(
   },
 );
 
+export const getCars = createAsyncThunk('car/getCar', async () => {
+  const response = await axios.get(`${baseUrl}/cars`);
+  return response.data;
+});
+
+export const Car = createAsyncThunk('car/Car', async (payload) => {
+  const response = await axios.get(`${baseUrl}/cars/${payload}`);
+  return response.data;
+});
+
+export const Deletecar = createAsyncThunk('car/Deletecar', async (payload) => {
+  const response = await axios.delete(`${baseUrl}/cars/${payload.id}`);
+  return response.data;
+});
+
 const initialState = {
   cars: [],
+  car: '',
 };
 
 const CarSlice = createSlice({
@@ -34,7 +50,10 @@ const CarSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(AddnewCar.fulfilled, (state, action) => {
+    builder.addCase(Car.fulfilled, (state, action) => {
+      state.car = action.payload;
+    });
+    builder.addCase(getCars.fulfilled, (state, action) => {
       state.cars = action.payload;
     });
   },
