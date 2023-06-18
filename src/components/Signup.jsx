@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './componentsCss/login.css';
 import { useDispatch } from 'react-redux';
-import { postUser } from './Redux/UserSlice';
+import { postUser } from '../Redux/UserSlice';
 
 function Signup() {
   const [user, setuser] = useState({ username: '', email: '' });
@@ -13,7 +13,7 @@ function Signup() {
     setTimeout(() => {
       const token = localStorage.getItem('success');
       resolve(token);
-    }, 1000);
+    }, 2000);
   });
 
   const submit = async (e) => {
@@ -21,14 +21,29 @@ function Signup() {
     if (user.email === '' || user.username === '') {
       return;
     }
-    dispatch(postUser({ username: user.username }));
-    const token = await getmessage();
-    if (token) {
-      navigate('/login', { replace: true });
-      localStorage.removeItem('success');
-    } else {
-      e.target.querySelector('.red').style.display = 'block';
+
+    try {
+      await dispatch(postUser({ username: user.username }));
+      const token = await getmessage();
+
+      if (token) {
+        navigate('/login', { replace: true });
+        localStorage.removeItem('success');
+      } else {
+        e.target.querySelector('.red').style.display = 'block';
+      }
+    } catch (error) {
+      // Handle any errors from the dispatch or getTokenFromLocalStorage
+      console.error(error);
     }
+    // dispatch(postUser({ username: user.username }));
+    // const token = await getmessage();
+    // if (token) {
+    //   navigate('/login', { replace: true });
+    //   localStorage.removeItem('success');
+    // } else {
+    //   e.target.querySelector('.red').style.display = 'block';
+    // }
   };
 
   return (
