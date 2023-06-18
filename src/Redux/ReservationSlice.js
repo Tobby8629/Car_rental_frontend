@@ -8,7 +8,7 @@ export const createReserve = createAsyncThunk('reserve/createReserve', async (pa
     car_id: payload.car,
   };
   const response = await fetch(
-    'https://che-v1m0.onrender.com/api/v1/reservations',
+    'https://ed-68aw.onrender.com/api/v1/reservations',
     {
       method: 'post',
       headers: { 'content-type': 'application/json' },
