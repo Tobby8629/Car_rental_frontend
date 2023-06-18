@@ -34,7 +34,7 @@ function Signup() {
       }
     } catch (error) {
       // Handle any errors from the dispatch or getTokenFromLocalStorage
-      console.error(error);
+      // console.error(error);
     }
     // dispatch(postUser({ username: user.username }));
     // const token = await getmessage();

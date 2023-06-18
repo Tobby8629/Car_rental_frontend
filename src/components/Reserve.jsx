@@ -94,7 +94,7 @@ function Reservation() {
       navigate('/');
     } catch (error) {
       // Handle any errors from the dispatch or getTokenFromLocalStorage
-      console.error(error);
+      // console.error(error);
     }
   };
   return (
