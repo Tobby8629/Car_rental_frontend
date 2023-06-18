@@ -104,14 +104,15 @@ const AddCar = () => {
                 Car Image
 
                 <input
-                  type="file"
-                  accept="image/*"
+                  // type="file"
+                  // accept="image/*"
+                  type="text"
                   name="photo"
                   value={carDatas.photo}
                   onChange={handleChange}
                   className="form-control"
                   id="carImage"
-                  placeholder="Car Image"
+                  placeholder="Enter your image url"
                 />
               </label>
             </div>

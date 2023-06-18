@@ -1,98 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './componentsCss/delete.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { Deletecar, getCars } from '../Redux/CarSlice';
 
 function DeleteCar() {
-  const cars = [
-    {
-      id: 7,
-      name: 'range rover',
-      price: 2000,
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
-      year: 2022,
-      image: 'car1.jpg',
-    },
-    {
-      id: 8,
-      name: 'mercedes',
-      price: 2000,
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
-      year: 2022,
-      image: 'car2.jpg',
-    },
-    {
-      id: 9,
-      name: 'chevrolet',
-      price: 2000,
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
-      year: 2022,
-      image: 'car3.jpg',
-    },
-    {
-      id: 10,
-      name: 'dodge',
-      price: 2000,
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      year: 2022,
-      image: 'car4.jpg',
-    },
-    {
-      id: 11,
-      name: 'porshe',
-      price: 2000,
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      year: 2022,
-      image: 'car5.jpg',
-    },
-    {
-      id: 1,
-      name: 'range rover',
-      price: 2000,
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
-      year: 2022,
-      image: 'car1.jpg',
-    },
-    {
-      id: 2,
-      name: 'mercedes',
-      price: 2000,
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
-      year: 2022,
-      image: 'car2.jpg',
-    },
-    {
-      id: 3,
-      name: 'chevrolet',
-      price: 2000,
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
-      year: 2022,
-      image: 'car3.jpg',
-    },
-    {
-      id: 4,
-      name: 'dodge',
-      price: 2000,
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      year: 2022,
-      image: 'car4.jpg',
-    },
-    {
-      id: 5,
-      name: 'porshe',
-      price: 2000,
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      year: 2022,
-      image: 'car5.jpg',
-    },
-    {
-      id: 6,
-      name: 'bentley',
-      price: 2000,
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      year: 2022,
-      image: 'car6.jpg',
-    },
-  ];
-
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getCars());
+  }, [dispatch]);
+  const cars = useSelector((state) => state.Cars.cars);
   const [buttondis, setbuttondis] = useState(false);
   const [prevdis, setprev] = useState(false);
   const [car, setcar] = useState(1);
@@ -100,6 +17,7 @@ function DeleteCar() {
   const last = car * perpage;
   const first = last - perpage;
   const each = cars.slice(first, last);
+  const navigate = useNavigate();
   const next = () => {
     if (car >= Math.round(cars.length / 6)) {
       setbuttondis(true);
@@ -120,6 +38,14 @@ function DeleteCar() {
     }
   };
 
+  const Delete = async (id) => {
+    try {
+      await dispatch(Deletecar({ id }));
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <section className="delete">
       <div className="header">
@@ -128,9 +54,9 @@ function DeleteCar() {
 
       <div className="all">
         {each.map((e) => (
-          <div className="each" key={e.name}>
+          <div className="each" key={e.id}>
             <div className="image">
-              <img src={e.image} alt={e.name} />
+              <img src={e.photo} alt={e.name} />
             </div>
             <div className="text">
               <h4>{e.name}</h4>
@@ -145,7 +71,7 @@ function DeleteCar() {
                     {e.year}
                   </h5>
                 </div>
-                <button type="button">Delete</button>
+                <button type="button" onClick={() => Delete(e.id)}>Delete</button>
               </div>
             </div>
           </div>
