@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/extensions */
 import React, { useEffect } from 'react';
 import './componentsCss/details.css';
 import { BiLeftArrow } from 'react-icons/bi';

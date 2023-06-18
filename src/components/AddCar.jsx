@@ -104,9 +104,9 @@ const AddCar = () => {
                 Car Image
 
                 <input
-                  // type="file"
-                  // accept="image/*"
-                  type="text"
+                  type="file"
+                  accept="image/*"
+                  // type="text"
                   name="photo"
                   value={carDatas.photo}
                   onChange={handleChange}
