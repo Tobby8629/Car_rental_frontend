@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './componentsCss/cars.css';
+import { Link } from 'react-router-dom';
 
 function Cars() {
   const cars = [
     {
+      id: 1,
       name: 'range rover',
       price: 2000,
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
@@ -11,6 +13,7 @@ function Cars() {
       image: 'car1.jpg',
     },
     {
+      id: 2,
       name: 'mercedes',
       price: 2000,
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
@@ -18,6 +21,7 @@ function Cars() {
       image: 'car2.jpg',
     },
     {
+      id: 3,
       name: 'chevrolet',
       price: 2000,
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
@@ -25,6 +29,7 @@ function Cars() {
       image: 'car3.jpg',
     },
     {
+      id: 4,
       name: 'dodge',
       price: 2000,
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
@@ -32,6 +37,7 @@ function Cars() {
       image: 'car4.jpg',
     },
     {
+      id: 5,
       name: 'porshe',
       price: 2000,
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
@@ -39,6 +45,7 @@ function Cars() {
       image: 'car5.jpg',
     },
     {
+      id: 6,
       name: 'bentley',
       price: 2000,
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
@@ -55,7 +62,7 @@ function Cars() {
   const first = last - perpage;
   const each = cars.slice(first, last);
   const next = () => {
-    if (car >= Math.floor(cars.length / 3)) {
+    if (car >= Math.round(cars.length / 3)) {
       setbuttondis(true);
     } else {
       setbuttondis(false);
@@ -87,7 +94,7 @@ function Cars() {
             <div className="image">
               <img src={e.image} alt={e.name} />
             </div>
-            <h4>{e.name}</h4>
+            <Link to={`/${e.id}`} className="link">{e.name}</Link>
             <p>
               {e.description.split(' ').slice(0, 15).join(' ')}
               . . .

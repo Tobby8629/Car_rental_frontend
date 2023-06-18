@@ -1,68 +1,127 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import { FaChevronRight } from 'react-icons/fa';
-import { BiLeftArrow, BiRotateRight, BiChevronRightCircle } from 'react-icons/bi';
-import { FiSettings } from 'react-icons/fi';
+import './componentsCss/details.css';
+import { BiLeftArrow } from 'react-icons/bi';
+import 'react-circular-progressbar/dist/styles.css';
+import { Link, useParams } from 'react-router-dom';
+// eslint-disable-next-line import/extensions
+import CircularprogressBar from './CircularprogressBar';
 
-import { Link } from 'react-router-dom';
+const CarDetails = () => {
+  const cars = [
+    {
+      id: 1,
+      name: 'range rover',
+      price: 2000,
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
+      year: 2022,
+      image: 'car1.jpg',
+    },
+    {
+      id: 2,
+      name: 'mercedes',
+      price: 2000,
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
+      year: 2022,
+      image: 'car2.jpg',
+    },
+    {
+      id: 3,
+      name: 'chevrolet',
+      price: 2000,
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  when an unknown printer took a galley of type and scrambled it to make a type specimen book',
+      year: 2022,
+      image: 'car3.jpg',
+    },
+    {
+      id: 4,
+      name: 'dodge',
+      price: 2000,
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      year: 2022,
+      image: 'car4.jpg',
+    },
+    {
+      id: 5,
+      name: 'porshe',
+      price: 2000,
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      year: 2022,
+      image: 'car5.jpg',
+    },
+    {
+      id: 6,
+      name: 'bentley',
+      price: 2000,
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      year: 2022,
+      image: 'car6.jpg',
+    },
+  ];
+  const { carId } = useParams();
+  const data = cars.find((e) => e.id === parseInt(carId, 10));
 
-const CarDetails = () => (
-  <section>
-    <div className="container mt-3">
-      <div className="row w-100">
-        <div className="col-md-6">
-          <img
-            src="./assets/mobile.jpg"
-            alt="Ford Mustang"
-          />
-        </div>
-        <div className="col-md-6">
-          <h1>
-            Ford Mustang
-            {' '}
-            <span>678</span>
-          </h1>
-          <p>Finance fee: $56</p>
-          <p>Option to purchase fee: $56</p>
-          <p>Total amount payable: $567</p>
-          <p>Duration: 48 Months</p>
-          <p>
-            {' '}
-            <strong>5.9% APR </strong>
-            Representative
-          </p>
-          <a href="/" style={{ textTransform: 'uppercase', color: 'black' }}>
-            Discover More Models
-            <FaChevronRight fill="#97BF0F" />
-          </a>
-        </div>
+  return (
+    <section className="details">
+      <h1 className="mobile">{data.name}</h1>
+      <div className="image">
+        <img src={data.image} alt={data.name} />
       </div>
-
-      <div className="row w-100 mt-5">
-        <div className="col-md-4">
-          <Link to="/">
-            <button type="button" className="btn btn-warning btn-rounded">
-              <BiLeftArrow fill="white" size={30} />
-            </button>
-          </Link>
+      <div className="container">
+        <div className="wrap">
+          <div className="desktop">
+            <h1>{data.name}</h1>
+          </div>
+          <ul>
+            <li>
+              Rental price: $
+              {data.price}
+            </li>
+            <li>
+              Car year:
+              {' '}
+              {' '}
+              {data.year}
+            </li>
+            <li>
+              Car model:
+              {' '}
+              {' '}
+              {data.transmission}
+            </li>
+            <li>
+              car manufacturer:
+              {' '}
+              {' '}
+              {data.manufacture}
+            </li>
+            <li>
+              Car owner:
+              {' '}
+              {' '}
+              {data.owner}
+              {' '}
+              tobby
+            </li>
+          </ul>
+          <div className="col">
+            <Link to="/" style={{ textTransform: 'uppercase', color: 'black' }}>
+              Discover More Models
+              <span><i className="fa-solid fa-angle-right" /></span>
+            </Link>
+            <CircularprogressBar percentage={90} />
+          </div>
         </div>
-        <div className="col-md-4">
-          <button type="button" className="btn">
-            <BiRotateRight fill="black" size={30} />
-            <br />
-            <span>Rotate Vehicle</span>
-          </button>
-        </div>
-        <div className="col-md-4">
-          <button type="button" className="reserve-btn btn btn-warning btn-rounded d-flex justify-content-between align-items-center gap-3 text-white">
-            <FiSettings fill="#FFC108" size={30} />
-            <h4> Reserve </h4>
-            <BiChevronRightCircle fill="yellow" size={30} />
-          </button>
-        </div>
+        <button type="button" className="btt">
+          <Link to="/reservee"> Reserve </Link>
+          <span><i className="fa-solid fa-angle-right" /></span>
+        </button>
       </div>
-    </div>
-  </section>
-);
+      <button className="next" type="button">
+        <Link to="/"><BiLeftArrow fill="white" size={30} /></Link>
+      </button>
+    </section>
+  );
+};
 
 export default CarDetails;
