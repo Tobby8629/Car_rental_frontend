@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import './componentsCss/delete.css';
 import { useDispatch, useSelector } from 'react-redux';
