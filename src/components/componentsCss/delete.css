@@ -80,11 +80,6 @@
 }
 
 @media (min-width: 768px) {
-  
-  .myreserve .price {
-    justify-content: unset;
-  }
-
   .delete {
     padding: 1rem;
   }
@@ -113,6 +108,7 @@
 
   .myreserve .price {
     display: block;
+    justify-content: unset;
   }
 
   .delete button {
