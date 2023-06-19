@@ -10,6 +10,7 @@ import Login from './components/login';
 import Signup from './components/Signup';
 import PrivateRoute from './components/PrivateRoute';
 import CarDetails from './components/CarDetails';
+import Showreserve from './components/Showreserve';
 
 function App() {
   return (
@@ -22,10 +23,11 @@ function App() {
           <Route path="myreserve" element={<MyReservation />} />
           <Route path="add" element={<AddCar />} />
           <Route path="delete" element={<DeleteCar />} />
+          <Route path="/:carId" element={<CarDetails />} />
+          <Route path="showreserve" element={<Showreserve />} />
         </Route>
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
-        <Route path="/:carId" element={<CarDetails />} />
       </Routes>
     </div>
   );
