@@ -46,8 +46,7 @@
 
 .delete button {
   width: fit-content;
-  height: 35px;
-  padding: 0 1.5rem;
+  padding: 0.3rem 1.5rem;
   background-color: transparent;
   border: 2px solid rgb(245, 55, 55);
   color: rgb(245, 55, 55);
@@ -113,6 +112,10 @@
 
   .myreserve .price {
     display: block;
+  }
+
+  .delete button {
+    height: auto;
   }
 }
 

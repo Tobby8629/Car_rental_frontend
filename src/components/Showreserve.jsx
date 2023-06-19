@@ -1,24 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './componentsCss/reservation.css';
 import { useNavigate } from 'react-router-dom';
 import { createReserve } from '../Redux/ReservationSlice';
-import { getCars } from '../Redux/CarSlice';
 
-function Reservation() {
-  const cars = useSelector((state) => state.Cars.cars);
+function Showreserve() {
+  const data = useSelector((state) => state.Cars.car);
+
+  if (data) { localStorage.setItem('car', JSON.stringify(data)); }
+
   const storage = localStorage.getItem('token');
   const user = JSON.parse(storage);
+  const carstorage = localStorage.getItem('car');
+  const car = JSON.parse(carstorage);
+
+  console.log(data);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getCars());
-  }, [dispatch]);
-
   const [reserve, setreserve] = useState({
-    userId: user.id, city: '', pickUp: '', date: '', returnDate: '', carId: '',
+    userId: user.id, city: '', pickUp: '', date: '', returnDate: '', carId: car.id,
   });
 
   const submit = async (e) => {
@@ -46,6 +48,7 @@ function Reservation() {
         car: reserve.carId,
         return_date: reserve.returnDate,
       }));
+      localStorage.removeItem('car');
       navigate('/myreserve');
     } catch (error) {
       // Handle any errors from the dispatch or getTokenFromLocalStorage
@@ -54,7 +57,7 @@ function Reservation() {
   };
   return (
     <section className="rees">
-      <div className="reservation form">
+      <div className="reservation form shw" style={{ '--bg': `url(${car.photo})` }}>
         <form onSubmit={submit}>
           <h2>Make reservation with us</h2>
           <div className="redone"> All field must be filled</div>
@@ -63,12 +66,12 @@ function Reservation() {
           <input type="date" id="date" value={reserve.date} placeholder="date" onChange={(e) => setreserve({ ...reserve, date: e.target.value })} />
           <input type="date" id="date" value={reserve.returnDate} placeholder="date" onChange={(e) => setreserve({ ...reserve, returnDate: e.target.value })} />
           <div className="red">your return must not be before your pickup date</div>
-          <select onChange={(e) => { setreserve({ ...reserve, carId: e.target.value }); }}>
+          {/* <select onChange={(e) => { setreserve({ ...reserve, carId: e.target.value }); }}>
             <option value="">select</option>
             {cars.map((e) => (
               <option value={e.id} key={e.id}>{e.name}</option>
             ))}
-          </select>
+          </select> */}
           <div className="form-btn">
             <button type="submit">Reserve</button>
           </div>
@@ -78,4 +81,4 @@ function Reservation() {
   );
 }
 
-export default Reservation;
+export default Showreserve;
