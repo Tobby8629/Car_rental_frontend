@@ -65,10 +65,6 @@
   color: rgb(59, 58, 58);
 }
 
-.myreserve .price {
-  justify-content: unset;
-}
-
 .myreserve .price h5 {
   box-shadow: 0 0 5px 0 #c6c3c3d1;
   padding: 10px;
@@ -84,6 +80,11 @@
 }
 
 @media (min-width: 768px) {
+  
+  .myreserve .price {
+    justify-content: unset;
+  }
+
   .delete {
     padding: 1rem;
   }

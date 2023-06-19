@@ -73,7 +73,7 @@ const CarDetails = () => {
           <span><i className="fa-solid fa-angle-right" /></span>
         </button>
       </div>
-      <button className="next" type="button">
+      <button className="next desktop" type="button">
         <Link to="/"><BiLeftArrow fill="white" size={30} /></Link>
       </button>
     </section>
