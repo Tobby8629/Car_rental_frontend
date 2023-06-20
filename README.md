@@ -12,8 +12,6 @@
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Cars Rental Frontend ](#-cars-rental-frontend-)
   - [Live Demo](#live-demo)
-  - [Desktop View](#desktop-view)
-  - [Mobile View](#mobile-view)
   - [Kanban Board](#kanban-board)
   - [Backend](#backend)
   - [Contributors](#contributors)
@@ -90,8 +88,8 @@ In order to run this project you need:
 
 - Mac or PC
 - Install node.js
-- Use npm as package manager.
-- Understanding of React and Redux
+- Use npm or yarn as package manager.
+- Have depth Understanding of React, Redux and API.
 
 ### Setup
 
@@ -157,9 +155,9 @@ In order to run this project you need:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [x] **Apply multi language**
-- [x] **Add payment option**
-- [x] **Improve The UI Design**
+- [X] **Apply multi language model**
+- [X] **Add payment option**
+- [X] **Improve The UI Design**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
