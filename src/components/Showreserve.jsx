@@ -4,7 +4,7 @@ import './componentsCss/reservation.css';
 import { useNavigate } from 'react-router-dom';
 import { createReserve } from '../Redux/ReservationSlice';
 
-function Showreserve() {
+const Showreserve = () => {
   const data = useSelector((state) => state.Cars.car);
 
   if (data) { localStorage.setItem('car', JSON.stringify(data)); }
@@ -13,8 +13,6 @@ function Showreserve() {
   const user = JSON.parse(storage);
   const carstorage = localStorage.getItem('car');
   const car = JSON.parse(carstorage);
-
-  console.log(data);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -51,8 +49,7 @@ function Showreserve() {
       localStorage.removeItem('car');
       navigate('/myreserve');
     } catch (error) {
-      // Handle any errors from the dispatch or getTokenFromLocalStorage
-      // console.error(error);
+      navigate('/showreserve');
     }
   };
   return (
@@ -66,12 +63,6 @@ function Showreserve() {
           <input type="date" id="date" value={reserve.date} placeholder="date" onChange={(e) => setreserve({ ...reserve, date: e.target.value })} />
           <input type="date" id="date" value={reserve.returnDate} placeholder="date" onChange={(e) => setreserve({ ...reserve, returnDate: e.target.value })} />
           <div className="red">your return must not be before your pickup date</div>
-          {/* <select onChange={(e) => { setreserve({ ...reserve, carId: e.target.value }); }}>
-            <option value="">select</option>
-            {cars.map((e) => (
-              <option value={e.id} key={e.id}>{e.name}</option>
-            ))}
-          </select> */}
           <div className="form-btn">
             <button type="submit">Reserve</button>
           </div>
@@ -79,6 +70,6 @@ function Showreserve() {
       </div>
     </section>
   );
-}
+};
 
 export default Showreserve;
