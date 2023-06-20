@@ -22,7 +22,7 @@ const CarDetails = () => {
     <section className="details">
       <h1 className="mobile">{data.name}</h1>
       <div className="image">
-        <img src={data.photo} alt={data.name} />
+        <img src={data.photo} alt={data.name} crossOrigin="anonymous | use-credentials" />
       </div>
       <div className="container">
         <div className="wrap">
@@ -56,9 +56,8 @@ const CarDetails = () => {
               Car owner:
               {' '}
               {' '}
-              {data.owner}
+              {data.username}
               {' '}
-              tobby
             </li>
           </ul>
           <div className="col">
@@ -70,11 +69,11 @@ const CarDetails = () => {
           </div>
         </div>
         <button type="button" className="btt">
-          <Link to="/reservee"> Reserve </Link>
+          <Link to="/showreserve"> Reserve </Link>
           <span><i className="fa-solid fa-angle-right" /></span>
         </button>
       </div>
-      <button className="next" type="button">
+      <button className="next desktop" type="button">
         <Link to="/"><BiLeftArrow fill="white" size={30} /></Link>
       </button>
     </section>

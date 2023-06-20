@@ -1,5 +1,10 @@
+.rees {
+  padding: 0;
+}
+
 section .reservation {
   background-image: linear-gradient(rgba(93, 228, 125, 0.575), rgba(93, 228, 125, 0.575)), url('../assets/reservation.jpg');
+  padding: 0;
   color: white;
 }
 
@@ -41,6 +46,10 @@ section .reservation form button {
 }
 
 @media (min-width: 768px) {
+  .rees {
+    padding: 0;
+  }
+
   section .reservation form {
     width: 80%;
   }
