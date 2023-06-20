@@ -42,7 +42,7 @@ const DeleteCar = () => {
 
   const Delete = async (id) => {
     try {
-      await dispatch(Deletecar({ id }));
+      await dispatch(Deletecar(id));
       window.location.reload();
       return true;
     } catch (error) {

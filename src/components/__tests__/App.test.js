@@ -2,8 +2,8 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import App from '../App';
-import store from '../Redux/store';
+import store from '../../Redux/store';
+import App from '../../App';
 
 describe('App Component Testing', () => {
   test('App Screenshot', () => {

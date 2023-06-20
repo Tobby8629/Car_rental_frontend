@@ -1,11 +1,10 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import Reserve from '../../Reserve';
-import store from '../../../Redux/store';
+import { BrowserRouter } from 'react-router-dom';
+import { render } from '@testing-library/react';
+import store from '../../Redux/store';
+import DeleteCar from '../DeleteCar';
 
-test('Reserve component matches snapshot', () => {
+test('home component match snapshot', () => {
   const user = { id: '123' }; // Set the desired user ID here
   const localStorageMock = {
     getItem: jest.fn().mockReturnValue(JSON.stringify(user)),
@@ -18,7 +17,7 @@ test('Reserve component matches snapshot', () => {
   const { asFragment } = render(
     <Provider store={store}>
       <BrowserRouter>
-        <Reserve />
+        <DeleteCar />
       </BrowserRouter>
     </Provider>,
 

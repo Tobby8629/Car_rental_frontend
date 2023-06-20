@@ -2,8 +2,8 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import Login from '../components/login';
-import store from '../Redux/store';
+import store from '../../Redux/store';
+import Login from '../login';
 
 describe('Login Component Testing', () => {
   test('Login Screenshot', () => {

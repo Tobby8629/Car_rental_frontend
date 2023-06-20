@@ -1,8 +1,8 @@
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
-import store from '../../../Redux/store';
-import MyReservation from '../../MyReservation';
+import store from '../../Redux/store';
+import MyReservation from '../MyReservation';
 
 test('MyReservation component matches snapshot', () => {
   const tree = renderer.create(

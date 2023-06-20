@@ -1,9 +1,9 @@
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
-import DeletCar from '../../Cars';
-import store from '../../../Redux/store';
+import store from '../../Redux/store';
+import Cars from '../Cars';
 
 test('home component match snapshot', () => {
-  const tree = renderer.create(<Provider store={store}><DeletCar /></Provider>).toJSON;
+  const tree = renderer.create(<Provider store={store}><Cars /></Provider>).toJSON;
   expect(tree).toMatchSnapshot();
 });

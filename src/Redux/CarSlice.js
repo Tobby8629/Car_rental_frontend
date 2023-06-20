@@ -26,7 +26,7 @@ export const Car = createAsyncThunk('car/Car', async (payload) => {
 });
 
 export const Deletecar = createAsyncThunk('car/Deletecar', async (payload) => {
-  const response = await axios.delete(`${baseUrl}/cars/${payload.id}`);
+  const response = await axios.delete(`${baseUrl}/cars/${payload}`);
   return response.data;
 });
 

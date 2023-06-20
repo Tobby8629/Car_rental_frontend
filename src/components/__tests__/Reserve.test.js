@@ -2,14 +2,13 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import ShowReserve from '../../ShowReserve';
-import store from '../../../Redux/store';
+import store from '../../Redux/store';
+import Reserve from '../Reserve';
 
-test('ShowReserve component matches snapshot', () => {
-  const user = { id: '123' };
-  const car = { id: '123' }; // Set the desired user ID here
+test('Reserve component matches snapshot', () => {
+  const user = { id: '123' }; // Set the desired user ID here
   const localStorageMock = {
-    getItem: jest.fn().mockReturnValue(JSON.stringify(user, car)),
+    getItem: jest.fn().mockReturnValue(JSON.stringify(user)),
   };
   Object.defineProperty(window, 'localStorage', {
     value: localStorageMock,
@@ -19,7 +18,7 @@ test('ShowReserve component matches snapshot', () => {
   const { asFragment } = render(
     <Provider store={store}>
       <BrowserRouter>
-        <ShowReserve />
+        <Reserve />
       </BrowserRouter>
     </Provider>,
 

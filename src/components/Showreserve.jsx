@@ -7,7 +7,7 @@ import { createReserve } from '../Redux/ReservationSlice';
 const Showreserve = () => {
   const data = useSelector((state) => state.Cars.car);
 
-  if (data) { localStorage.setItem('car', JSON.stringify(data)); }
+  localStorage.setItem('car', JSON.stringify(data));
 
   const storage = localStorage.getItem('token');
   const user = JSON.parse(storage);
