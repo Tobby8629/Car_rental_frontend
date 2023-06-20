@@ -4,7 +4,7 @@ import './componentsCss/login.css';
 import { useDispatch } from 'react-redux';
 import { postUser } from '../Redux/UserSlice';
 
-function Signup() {
+const Signup = () => {
   const [user, setuser] = useState({ username: '', email: '' });
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -33,17 +33,8 @@ function Signup() {
         e.target.querySelector('.red').style.display = 'block';
       }
     } catch (error) {
-      // Handle any errors from the dispatch or getTokenFromLocalStorage
-      // console.error(error);
+      navigate('/signup', { replace: true });
     }
-    // dispatch(postUser({ username: user.username }));
-    // const token = await getmessage();
-    // if (token) {
-    //   navigate('/login', { replace: true });
-    //   localStorage.removeItem('success');
-    // } else {
-    //   e.target.querySelector('.red').style.display = 'block';
-    // }
   };
 
   return (
@@ -63,6 +54,6 @@ function Signup() {
       </form>
     </div>
   );
-}
+};
 
 export default Signup;

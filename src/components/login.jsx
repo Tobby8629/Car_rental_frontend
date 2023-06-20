@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logUser } from '../Redux/UserSlice';
 
-function Login() {
+const Login = () => {
   const [user, setuser] = useState('');
   const dispatch = useDispatch();
   const location = useLocation();
@@ -35,8 +35,7 @@ function Login() {
         e.target.querySelector('.red').style.display = 'block';
       }
     } catch (error) {
-      // Handle any errors from the dispatch or getTokenFromLocalStorage
-      // console.error(error);
+      navigate('/login', { replace: true });
     }
   };
 
@@ -56,6 +55,6 @@ function Login() {
       </form>
     </div>
   );
-}
+};
 
 export default Login;

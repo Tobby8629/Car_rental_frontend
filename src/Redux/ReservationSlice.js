@@ -1,7 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-// const base = 'http://localhost:3000/api/v1'
-
 const base = 'https://vc-vscc.onrender.com/api/v1';
 export const createReserve = createAsyncThunk('reserve/createReserve', async (payload) => {
   const data = {

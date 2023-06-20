@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCars } from '../Redux/CarSlice';
 
-function Cars() {
+const Cars = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -76,6 +76,6 @@ function Cars() {
       </div>
     </section>
   );
-}
+};
 
 export default Cars;
