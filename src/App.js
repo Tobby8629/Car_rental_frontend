@@ -12,25 +12,23 @@ import PrivateRoute from './components/PrivateRoute';
 import CarDetails from './components/CarDetails';
 import Showreserve from './components/Showreserve';
 
-const App = () => {
-  return (
-    <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<PrivateRoute />}>
-          <Route path="/" element={<Cars />} />
-          <Route path="reserve" element={<Reserve />} />
-          <Route path="myreserve" element={<MyReservation />} />
-          <Route path="add" element={<AddCar />} />
-          <Route path="delete" element={<DeleteCar />} />
-          <Route path="/:carId" element={<CarDetails />} />
-          <Route path="showreserve" element={<Showreserve />} />
-        </Route>
-        <Route path="login" element={<Login />} />
-        <Route path="signup" element={<Signup />} />
-      </Routes>
-    </div>
-  );
-};
+const App = () => (
+  <div className="App">
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<PrivateRoute />}>
+        <Route path="/" element={<Cars />} />
+        <Route path="reserve" element={<Reserve />} />
+        <Route path="myreserve" element={<MyReservation />} />
+        <Route path="add" element={<AddCar />} />
+        <Route path="delete" element={<DeleteCar />} />
+        <Route path="/:carId" element={<CarDetails />} />
+        <Route path="showreserve" element={<Showreserve />} />
+      </Route>
+      <Route path="login" element={<Login />} />
+      <Route path="signup" element={<Signup />} />
+    </Routes>
+  </div>
+);
 
 export default App;
