@@ -35,8 +35,7 @@ function Login() {
         e.target.querySelector('.red').style.display = 'block';
       }
     } catch (error) {
-      // Handle any errors from the dispatch or getTokenFromLocalStorage
-      // console.error(error);
+      navigate('/login', { replace: true });
     }
   };
 
