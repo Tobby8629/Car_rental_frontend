@@ -2,8 +2,8 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import Navbar from '../components/Navbar';
-import store from '../Redux/store';
+import store from '../../Redux/store';
+import Navbar from '../Navbar';
 
 describe('Navbar Component Testing', () => {
   test('Navebar Screenshot', () => {

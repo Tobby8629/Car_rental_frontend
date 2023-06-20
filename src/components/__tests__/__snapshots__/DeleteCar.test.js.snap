@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`home component match snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="delete myreserve"
+  >
+    <div>
+      <h2>
+        You do not have any car, please add a
+        <a
+          href="/add"
+        >
+           new car
+        </a>
+      </h2>
+    </div>
+  </section>
+</DocumentFragment>
+`;
