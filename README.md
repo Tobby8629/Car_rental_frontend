@@ -40,7 +40,7 @@
 
 ## Live Demo
 
-Click [here]() to get the project's live demo.
+Click [here](https://car-rental-frontend-pink.vercel.app/login) to get the project's live demo.
 
 ## Kanban Board
 
@@ -48,7 +48,7 @@ Click [here](https://github.com/users/Tobby8629/projects/10) to view the Kanban 
 
 ## Backend
 
-Api documentation link is [here]()
+Api documentation link is [here](https://vc-vscc.onrender.com/api-docs/index.html)
 
 Api live demo is [here](https://vc-vscc.onrender.com/)
 
