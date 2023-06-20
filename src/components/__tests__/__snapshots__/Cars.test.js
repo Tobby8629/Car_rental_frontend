@@ -4,6 +4,6 @@ import Cars from '../../Cars';
 import store from '../../../Redux/store';
 
 test('home component match snapshot', () => {
-  const tree = renderer.create(<Provider store={store}><Cars/></Provider>).toJSON;
+  const tree = renderer.create(<Provider store={store}><Cars /></Provider>).toJSON;
   expect(tree).toMatchSnapshot();
 });

@@ -18,7 +18,7 @@ function Reservation() {
   }, [dispatch]);
 
   const [reserve, setreserve] = useState({
-    userId: user.id, city: '', pickUp: '', date: '', returnDate: '', carId: '',
+    userId: user.id || '', city: '', pickUp: '', date: '', returnDate: '', carId: '',
   });
 
   const submit = async (e) => {

@@ -17,5 +17,3 @@ exports[`MyReservation component matches snapshot 1`] = `
   </div>
 </section>
 `;
-
-exports[`home component match snapshot 1`] = `[Function]`;

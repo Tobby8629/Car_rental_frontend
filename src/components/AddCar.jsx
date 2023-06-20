@@ -14,7 +14,7 @@ const AddCar = () => {
     photo: '',
     price: '',
     model: '',
-    user_id: user.id,
+    user_id: user.id || null,
   });
 
   const [success, setSuccess] = useState('');
