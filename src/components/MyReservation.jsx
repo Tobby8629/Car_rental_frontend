@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteReserve, getReserve } from '../Redux/ReservationSlice';
 
-function DeleteCar() {
+const MyReservation = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -44,8 +44,9 @@ function DeleteCar() {
     try {
       await dispatch(deleteReserve(id));
       window.location.reload();
+      return true;
     } catch (error) {
-      console.log(error);
+      return false;
     }
   };
 
@@ -127,6 +128,6 @@ function DeleteCar() {
     </section>
 
   );
-}
+};
 
-export default DeleteCar;
+export default MyReservation;

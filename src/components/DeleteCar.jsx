@@ -4,13 +4,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Deletecar, userCars } from '../Redux/CarSlice';
 
-function DeleteCar() {
+const DeleteCar = () => {
   const dispatch = useDispatch();
   const storage = localStorage.getItem('token');
   const user = JSON.parse(storage);
   useEffect(() => {
     dispatch(userCars(user.id));
-  }, [dispatch]);
+  }, [dispatch, user.id]);
   const cars = useSelector((state) => state.Cars.userCars);
   const [buttondis, setbuttondis] = useState(false);
   const [prevdis, setprev] = useState(false);
@@ -42,10 +42,11 @@ function DeleteCar() {
 
   const Delete = async (id) => {
     try {
-      await dispatch(Deletecar({ id }));
+      await dispatch(Deletecar(id));
       window.location.reload();
+      return true;
     } catch (error) {
-      console.log(error);
+      return false;
     }
   };
   return (
@@ -102,6 +103,6 @@ function DeleteCar() {
     </section>
 
   );
-}
+};
 
 export default DeleteCar;

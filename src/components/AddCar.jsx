@@ -14,7 +14,7 @@ const AddCar = () => {
     photo: '',
     price: '',
     model: '',
-    user_id: user.id,
+    user_id: user.id || null,
   });
 
   const [success, setSuccess] = useState('');
@@ -72,7 +72,7 @@ const AddCar = () => {
                   onChange={handleChange}
                   id="carname"
                   className="form-control"
-                  placeholder="Car Name"
+                  placeholder="Enter Car Name"
                 />
               </label>
             </div>
@@ -86,7 +86,7 @@ const AddCar = () => {
                   onChange={handleChange}
                   className="form-control"
                   id="carPrice"
-                  placeholder="Car Price"
+                  placeholder="Enter Car Price"
                 />
               </label>
             </div>
@@ -102,7 +102,7 @@ const AddCar = () => {
                   onChange={handleChange}
                   className="form-control"
                   id="carmodel"
-                  placeholder="Car Model"
+                  placeholder="Enter Car Model"
                 />
               </label>
             </div>

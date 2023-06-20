@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { createReserve } from '../Redux/ReservationSlice';
 import { getCars } from '../Redux/CarSlice';
 
-function Reservation() {
+const Reservation = () => {
   const cars = useSelector((state) => state.Cars.cars);
   const storage = localStorage.getItem('token');
   const user = JSON.parse(storage);
@@ -18,7 +18,7 @@ function Reservation() {
   }, [dispatch]);
 
   const [reserve, setreserve] = useState({
-    userId: user.id, city: '', pickUp: '', date: '', returnDate: '', carId: '',
+    userId: user.id || '', city: '', pickUp: '', date: '', returnDate: '', carId: '',
   });
 
   const submit = async (e) => {
@@ -48,8 +48,7 @@ function Reservation() {
       }));
       navigate('/myreserve');
     } catch (error) {
-      // Handle any errors from the dispatch or getTokenFromLocalStorage
-      // console.error(error);
+      navigate('/reserve');
     }
   };
   return (
@@ -76,6 +75,6 @@ function Reservation() {
       </div>
     </section>
   );
-}
+};
 
 export default Reservation;
