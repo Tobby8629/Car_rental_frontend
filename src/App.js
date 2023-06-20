@@ -12,7 +12,7 @@ import PrivateRoute from './components/PrivateRoute';
 import CarDetails from './components/CarDetails';
 import Showreserve from './components/Showreserve';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Navbar />
@@ -31,6 +31,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;
