@@ -4,7 +4,7 @@ import './componentsCss/navbar.css';
 import { useDispatch } from 'react-redux';
 import { logout } from '../Redux/UserSlice';
 
-function Navbar() {
+const Navbar = () => {
   const dispatch = useDispatch();
   const [tray, settray] = useState(true);
   const signout = () => {
@@ -56,6 +56,6 @@ function Navbar() {
       </div>
     </>
   );
-}
+};
 
 export default Navbar;

@@ -7,18 +7,15 @@ const AddCar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const storage = localStorage.getItem('token');
+  const user = JSON.parse(storage);
   const [carDatas, setCarDatas] = useState({
     name: '',
     description: '',
     photo: '',
     price: '',
     model: '',
-    user_id: null,
+    user_id: user.id,
   });
-  const user = JSON.parse(storage);
-  if (user !== null && user !== undefined) {
-    carDatas.user_id = user.id;
-  }
 
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');

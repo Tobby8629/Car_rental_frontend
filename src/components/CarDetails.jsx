@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect } from 'react';
 import './componentsCss/details.css';
 import { BiLeftArrow } from 'react-icons/bi';
@@ -17,6 +16,8 @@ const CarDetails = () => {
   });
 
   const data = useSelector((state) => state.Cars.car);
+  const currentYear = new Date().getFullYear();
+  const owner = 'Tesla';
 
   return (
     <section className="details">
@@ -38,7 +39,7 @@ const CarDetails = () => {
               Car year:
               {' '}
               {' '}
-              {data.year}
+              {currentYear}
             </li>
             <li>
               Car model:
@@ -50,7 +51,7 @@ const CarDetails = () => {
               car manufacturer:
               {' '}
               {' '}
-              {data.manufacture}
+              {owner}
             </li>
             <li>
               Car owner:

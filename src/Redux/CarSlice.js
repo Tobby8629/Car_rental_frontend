@@ -1,9 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const baseUrl = 'https://vc-vscc.onrender.com/api/v1';
-// const baseUrl = 'http://localhost:3000/api/v1'
 
 export const AddnewCar = createAsyncThunk(
   'api/AddnewCar',
@@ -13,18 +11,7 @@ export const AddnewCar = createAsyncThunk(
       body: payload,
     });
     const data = await response.json();
-    console.log(data);
-    // try {
-    //   const token = JSON.parse(localStorage.getItem('token'));
-    //   const response = await axios.post(`${baseUrl}/cars`, payload, {
-    //     headers: {
-    //       Authorization: `Bearer ${token}`,
-    //     },
-    //   });
-    //   return response.data;
-    // } catch (error) {
-    //   return rejectWithvalue(await error.response.data);
-    // }
+    return data;
   },
 );
 
