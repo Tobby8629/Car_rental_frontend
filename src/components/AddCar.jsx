@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { AddnewCar } from '../Redux/CarSlice';
 
 const AddCar = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const storage = localStorage.getItem('token');
   const user = JSON.parse(storage);
   const [carDatas, setCarDatas] = useState({
@@ -27,7 +29,16 @@ const AddCar = () => {
       }, 3000);
       return;
     }
-    await dispatch(AddnewCar(carDatas));
+    const formData = new FormData();
+
+    formData.append('car[name]', carDatas.name);
+    formData.append('car[description]', carDatas.description);
+    formData.append('car[photo]', carDatas.photo);
+    formData.append('car[price]', carDatas.price);
+    formData.append('car[model]', carDatas.model);
+    formData.append('car[user_id]', carDatas.user_id);
+
+    await dispatch(AddnewCar(formData));
     setCarDatas({
       name: '',
       description: '',
@@ -36,10 +47,7 @@ const AddCar = () => {
       model: '',
     });
     setSuccess('Car Added Successfully');
-    setTimeout(() => {
-      setSuccess('');
-    },
-    3000);
+    navigate('/');
   };
 
   const handleChange = (e) => {
@@ -104,16 +112,18 @@ const AddCar = () => {
                 Car Image
 
                 <input
-                  // type="file"
-                  // accept="image/*"
-                  type="text"
+                  type="file"
+                  accept="image/*"
                   name="photo"
-                  value={carDatas.photo}
-                  onChange={handleChange}
+                  onChange={(e) => {
+                    const file = e.target.files[0];
+                    setCarDatas({ ...carDatas, photo: file });
+                  }}
                   className="form-control"
                   id="carImage"
                   placeholder="Enter your image url"
                 />
+
               </label>
             </div>
 

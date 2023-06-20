@@ -1,16 +1,20 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
+// const base = 'http://localhost:3000/api/v1'
+
+const base = 'https://vc-vscc.onrender.com/api/v1';
 export const createReserve = createAsyncThunk('reserve/createReserve', async (payload) => {
   const data = {
     city: payload.city,
-    pick_up: payload.pickup,
-    return_date: payload.return,
+    pick_up: payload.date,
+    return_date: payload.return_date,
     car_id: payload.car,
+    user_id: payload.user_id,
   };
   const response = await fetch(
-    'https://ed-68aw.onrender.com/api/v1/reservations',
+    `${base}/reservations`,
     {
-      method: 'post',
+      method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(data),
     },
@@ -19,7 +23,27 @@ export const createReserve = createAsyncThunk('reserve/createReserve', async (pa
   return res;
 });
 
+export const getReserve = createAsyncThunk('reserve/getReserve', async () => {
+  const response = await fetch(`${base}/reservations`);
+  const data = await response.json();
+  return data;
+});
+
+export const deleteReserve = createAsyncThunk('reserve/deleteReserve', async (payload) => {
+  const response = await fetch(
+    `${base}/reservations/${payload}`,
+    {
+      method: 'DELETE',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(payload),
+    },
+  );
+  const res = response.json();
+  return res;
+});
+
 const initialState = {
+  reservations: [],
 };
 
 const ReservationSlice = createSlice({
@@ -32,12 +56,9 @@ const ReservationSlice = createSlice({
         localStorage.setItem('success', JSON.stringify(action.payload));
       }
     });
-    // builder.addCase(logUser.fulfilled, (state, action) => {
-    //   state.loginpass = action.payload;
-    //   if (action.payload.token) {
-    //     localStorage.setItem('token', JSON.stringify(action.payload));
-    //   }
-    // });
+    builder.addCase(getReserve.fulfilled, (state, action) => {
+      state.reservations = action.payload;
+    });
   },
 });
 

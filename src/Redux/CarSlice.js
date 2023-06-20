@@ -2,22 +2,29 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const baseUrl = 'https://ed-68aw.onrender.com/api/v1';
+const baseUrl = 'https://vc-vscc.onrender.com/api/v1';
+// const baseUrl = 'http://localhost:3000/api/v1'
 
 export const AddnewCar = createAsyncThunk(
   'api/AddnewCar',
-  async (payload, { rejectWithvalue }) => {
-    try {
-      const token = JSON.parse(localStorage.getItem('token'));
-      const response = await axios.post(`${baseUrl}/cars`, payload, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      return response.data;
-    } catch (error) {
-      return rejectWithvalue(await error.response.data);
-    }
+  async (payload) => {
+    const response = await fetch(`${baseUrl}/cars`, {
+      method: 'POST',
+      body: payload,
+    });
+    const data = await response.json();
+    console.log(data);
+    // try {
+    //   const token = JSON.parse(localStorage.getItem('token'));
+    //   const response = await axios.post(`${baseUrl}/cars`, payload, {
+    //     headers: {
+    //       Authorization: `Bearer ${token}`,
+    //     },
+    //   });
+    //   return response.data;
+    // } catch (error) {
+    //   return rejectWithvalue(await error.response.data);
+    // }
   },
 );
 
@@ -36,9 +43,15 @@ export const Deletecar = createAsyncThunk('car/Deletecar', async (payload) => {
   return response.data;
 });
 
+export const userCars = createAsyncThunk('car/userCars', async (payload) => {
+  const response = await axios.get(`${baseUrl}/cars/cars?id=${payload}`);
+  return response.data;
+});
+
 const initialState = {
   cars: [],
   car: '',
+  userCars: [],
 };
 
 const CarSlice = createSlice({
@@ -56,7 +69,12 @@ const CarSlice = createSlice({
     builder.addCase(getCars.fulfilled, (state, action) => {
       state.cars = action.payload;
     });
+
+    builder.addCase(userCars.fulfilled, (state, action) => {
+      state.userCars = action.payload;
+    });
   },
+
 });
 
 export const { addCar } = CarSlice.actions;
