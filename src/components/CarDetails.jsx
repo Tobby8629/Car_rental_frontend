@@ -16,8 +16,6 @@ const CarDetails = () => {
   });
 
   const data = useSelector((state) => state.Cars.car);
-  const currentYear = new Date().getFullYear();
-  const owner = 'Tesla';
 
   return (
     <section className="details">
@@ -39,7 +37,7 @@ const CarDetails = () => {
               Car year:
               {' '}
               {' '}
-              {currentYear}
+              {data.year}
             </li>
             <li>
               Car model:
@@ -51,7 +49,7 @@ const CarDetails = () => {
               car manufacturer:
               {' '}
               {' '}
-              {owner}
+              {data.owner}
             </li>
             <li>
               Car owner:
