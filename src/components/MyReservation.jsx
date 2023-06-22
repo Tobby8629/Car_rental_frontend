@@ -121,7 +121,7 @@ const MyReservation = () => {
         <div>
           <h2>
             You do not have any reservation, please add a
-            <Link to="/reserve">new Reservation</Link>
+            <Link to="/reserve"> new Reservation</Link>
           </h2>
         </div>
       )}

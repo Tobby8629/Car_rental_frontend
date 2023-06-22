@@ -7,7 +7,7 @@
 }
 
 .form form {
-  width: 80%;
+  width: 90%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -120,12 +120,12 @@
 
   .sign form {
     width: 70%;
-    padding: 3rem 8rem;
+    padding: 3rem 4rem;
   }
 }
 
 @media (min-width: 1000px) {
   .form form {
-    width: 50%;
+    width: 60%;
   }
 }

@@ -11,7 +11,7 @@ exports[`MyReservation component matches snapshot 1`] = `
         href="/reserve"
         onClick={[Function]}
       >
-        new Reservation
+         new Reservation
       </a>
     </h2>
   </div>
