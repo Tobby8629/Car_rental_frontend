@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reserve component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="rees"
+  >
+    <div
+      class="reservation form"
+    >
+      <form>
+        <h2>
+          Make reservation with us
+        </h2>
+        <div
+          class="redone"
+        >
+           All field must be filled
+        </div>
+        <input
+          id="city"
+          placeholder="city"
+          type="text"
+          value=""
+        />
+        <input
+          id="pickup"
+          placeholder="pickup"
+          type="text"
+          value=""
+        />
+        <input
+          id="date"
+          placeholder="date"
+          type="date"
+          value=""
+        />
+        <input
+          id="date"
+          placeholder="date"
+          type="date"
+          value=""
+        />
+        <div
+          class="red"
+        >
+          your return must not be before your pickup date
+        </div>
+        <select>
+          <option
+            value=""
+          >
+            select
+          </option>
+        </select>
+        <div
+          class="form-btn"
+        >
+          <button
+            type="submit"
+          >
+            Reserve
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</DocumentFragment>
+`;

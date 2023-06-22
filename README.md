@@ -1,70 +1,201 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <h3><b>Cars Rental Frontend Part</b></h3>
+</div>
+<a name="readme-top"></a>
 
-## Available Scripts
+<!-- TABLE OF CONTENTS -->
 
-In the project directory, you can run:
+# 📗 Table of Contents
 
-### `npm start`
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Cars Rental Frontend ](#-cars-rental-frontend-)
+  - [Live Demo](#live-demo)
+  - [Kanban Board](#kanban-board)
+  - [Backend](#backend)
+  - [Contributors](#contributors)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+  - [To get a local copy up and running, follow these steps.](#to-get-a-local-copy-up-and-running-follow-these-steps)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- PROJECT DESCRIPTION -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 📖 Cars Rental Frontend <a name="about-project"></a>
 
-### `npm test`
+> Car Rentals Frontend is a React app that serves as a front end to the Car Rentals project api with rails app. This an educational app for the purpose of Final group capstone.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Live Demo <a name="live-demo"></a>
 
-### `npm run build`
+Click [here](https://car-rental-frontend-pink.vercel.app/login) to get the project's live demo.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Kanban Board <a name="kanban-board"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Click [here](https://github.com/users/Tobby8629/projects/10) to view the Kanban Board we set out for this project .
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A [link](https://github.com/Tobby8629/Car_Rental_Backend/issues/15) to the screenshot of the initial state of our Kanban board.
 
-### `npm run eject`
+## Backend <a name="backend"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Api documentation link is [here](https://vc-vscc.onrender.com/api-docs/index.html)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Api live demo is [here](https://vc-vscc.onrender.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributors <a name="contributors"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+There were 4 contributors to this project, you can see their contact information in the Authors section of this document.
 
-## Learn More
+## 🛠 Built With <a name="built-with"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This app is build with React and Redux.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Tech Stack <a name="tech-stack"></a>
 
-### Code Splitting
+> <li><a href="https://reactjs.org/">React</a></li>
+> <li><a href="https://redux.js.org/">Redux</a></li>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Key Features <a name="key-features"></a>
 
-### Analyzing the Bundle Size
+> - The main page where the client can see all list of cars and click on any selcted car to display the details of that car.
+> - The client can make reservation through the reserve page.
+> - The client can see a list of their reservations.
+> - The client can add a new car through the add new navigation link.
+> - The client can click on the delete car button from the naviagtion panel and see a list of all cars which belongs to the current user with the car name and a "delete" button and then delete a particular car.
+> - The deleted cars are removed from the home page.
+> - The login page where the client logs in to the website.
+> - The Car details page is where the user can click on the "Reserve" button to reserve the car.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Making a Progressive Web App
+<!-- GETTING STARTED -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 💻 Getting Started <a name="getting-started"></a>
 
-### Advanced Configuration
+## To get a local copy up and running, follow these steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Prerequisites
 
-### Deployment
+In order to run this project you need:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Mac or PC
+- Install node.js
+- Use npm or yarn as package manager.
+- Have depth Understanding of React, Redux and API.
 
-### `npm run build` fails to minify
+### Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Clone this repository to your desired folder:
+
+```sh
+ git clone https://github.com/Tobby8629/Car_rental_frontend.git
+```
+
+- Navigate into the cloned folder
+
+```sh
+ cd Car_rental_frontend
+
+```
+
+### Install
+
+- Install this project with:
+
+```sh
+ npm install
+```
+
+- Start the server
+
+```sh
+ npm start
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Tekhlay B.**
+
+- GitHub: [![Tekhlay](https://img.shields.io/badge/-Tekhlay-blue?logo=GitHub&logoColor=yellow&style=square)](https://github.com/Tekhlay)
+- LinkedIn: [![Tekhlay](https://img.shields.io/badge/-Tekhlay-blue?logo=LinkedIn&logoColor=yellow&style=square)](https://www.linkedin.com/in/tekhlay/)
+
+👤 **Tobby S.**
+
+- GitHub: [![Tobby8629](https://img.shields.io/badge/-Tobby8629-blue?logo=GitHub&logoColor=yellow&style=square)](https://github.com/Tobby8629)
+- Twitter: [![tobby_samuels](https://img.shields.io/badge/-tobby_samuels-blue?logo=Twitter&logoColor=yellow&style=square)](https://twitter.com/tobby_samuels)
+- LinkedIn: [![samuel-popoola-tobby](https://img.shields.io/badge/-Samuelpopoolatobby-blue?logo=LinkedIn&logoColor=yellow&style=square)](https://www.linkedin.com/in/samuel-popoola-tobby)
+
+👤 **Uchechi N.**
+
+- GitHub: [![uchexm](https://img.shields.io/badge/-uchexm-blue?logo=GitHub&logoColor=yellow&style=square)](https://github.com/uchexm)
+- LinkedIn: [![nwakauc](https://img.shields.io/badge/-nwakauc-blue?logo=LinkedIn&logoColor=yellow&style=square)](https://www.linkedin.com/in/nwakauc/)
+- Facebook: [![nwaka.uche.5](https://img.shields.io/badge/-nwaka.uche.5-blue?logo=Facebook&logoColor=yellow&style=square)](https://www.facebook.com/nwaka.uche.5/)
+
+👤 **Alex O.**
+
+- GitHub:[![Osoro254Alex](https://img.shields.io/badge/-Osoro254Alex-blue?logo=GitHub&logoColor=yellow&style=square)](https://github.com/Osoro254Alex)
+- Twitter:[![ALEX14809153](https://img.shields.io/badge/-ALEX14809153-blue?logo=Twitter&logoColor=yellow&style=square)](https://twitter.com/ALEX14809153)
+- LinkedIn:[![alexogeto](https://img.shields.io/badge/-alexogeto-blue?logo=LinkedIn&logoColor=yellow&style=square)](https://www.linkedin.com/in/alexogeto/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [x] **Apply multi language model**
+- [x] **Implement proper user authentication from the front-end to the server.**
+- [x] **Make sure that the "Add item" and "Delete item" links are accessible only by users who are admins.**
+- [x] **Add payment option**
+- [x] **Improve The UI Design**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Tobby8629/Car_rental_frontend/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, please give a ⭐️and share with your friends.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- We would like to thank Microverse for providing the reading materials that aided us to during the project development.
+- We would like to give Credit to 🙏 [Murat Korkmaz](https://www.behance.net/muratk) the author of the original [Vespa- Responsive Redesign](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign), as required by the Creative Commons License.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](https://github.com/Tobby8629/Car_rental_frontend/blob/development/LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -1,0 +1,80 @@
+.rees {
+  padding: 0;
+}
+
+section .reservation {
+  background-image: linear-gradient(rgba(93, 228, 125, 0.575), rgba(93, 228, 125, 0.575)), url('../assets/reservation.jpg');
+  padding: 0;
+  color: white;
+}
+
+.reservation input {
+  text-transform: capitalize;
+}
+
+.reservation select {
+  width: 100%;
+  padding: 1rem;
+  font-size: 20px;
+  border-radius: 0;
+  color: black;
+  text-transform: capitalize;
+}
+
+#date {
+  text-transform: uppercase;
+  color: black;
+  width: 100%;
+}
+
+section .reservation form {
+  width: 90%;
+}
+
+section .reservation form button {
+  color: white;
+  border-color: yellowgreen;
+}
+
+.reservation .red {
+  color: red;
+  margin: 0.8rem;
+}
+
+.redone {
+  color: red;
+  margin: 0.8rem;
+  display: none;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .rees {
+    padding: 0;
+  }
+
+  section .reservation form {
+    width: 80%;
+  }
+
+  section .reservation h2 {
+    font-size: 1.8rem;
+  }
+
+  section .reservation form input,
+  .reservation select {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  section .reservation form {
+    width: 70%;
+  }
+
+  section .reservation form input,
+  .reservation select {
+    padding: 1rem;
+  }
+}

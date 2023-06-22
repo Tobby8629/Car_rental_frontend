@@ -1,0 +1,127 @@
+.delete {
+  padding: 4rem 1rem;
+}
+
+.delete .header h3 {
+  margin: 1.2rem 0;
+  text-align: center;
+}
+
+.delete .each {
+  padding: 0;
+  border-radius: 8px;
+  padding-bottom: 0.5rem;
+}
+
+.delete .each h4 {
+  text-align: left;
+}
+
+.delete .image img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.delete .all {
+  flex-wrap: wrap;
+}
+
+.delete .text {
+  padding: 0.5rem 1rem;
+}
+
+.delete .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.delete .price h5 {
+  margin: 0.8rem 0;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.delete button {
+  width: fit-content;
+  padding: 0.3rem 1.5rem;
+  background-color: transparent;
+  border: 2px solid rgb(245, 55, 55);
+  color: rgb(245, 55, 55);
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.delete .btn {
+  display: flex;
+  justify-content: center;
+}
+
+.delete .btn button {
+  margin-right: 10px;
+  border: 2px solid gray;
+  color: rgb(59, 58, 58);
+}
+
+.myreserve .price h5 {
+  box-shadow: 0 0 5px 0 #c6c3c3d1;
+  padding: 10px;
+  margin: 10px 0;
+  margin-right: 10px;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+
+.myreserve .price .small {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .delete {
+    padding: 1rem;
+  }
+
+  .delete .all {
+    justify-content: center;
+  }
+
+  .delete .each {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 5px 0 gray;
+  }
+
+  .delete .image img {
+    border-radius: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .delete .text {
+    padding: 0.5rem;
+  }
+
+  .myreserve .price {
+    display: block;
+    justify-content: unset;
+  }
+
+  .delete button {
+    height: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .delete .each {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 5px 0 gray;
+  }
+}

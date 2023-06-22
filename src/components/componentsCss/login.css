@@ -1,0 +1,131 @@
+.form {
+  background-image: linear-gradient(rgba(213, 212, 212, 0.54), rgba(213, 212, 212, 0.54)), url("../assets/mobile-bg.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.form form {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0 1rem;
+  transform: translate(-50%, -50%);
+  background-color: rgba(189, 188, 188, 0.202);
+  backdrop-filter: blur(30px);
+}
+
+.form h2 {
+  margin: 1.3rem 0;
+  font-weight: 400;
+  position: relative;
+}
+
+.form h2::after {
+  content: '';
+  width: 20%;
+  height: 6px;
+  border-radius: 8px;
+  background-color: yellowgreen;
+  position: absolute;
+  left: 0;
+  bottom: -13px;
+}
+
+.form form label {
+  font-size: 18px;
+}
+
+.form form input {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  font-size: 18px;
+  outline: none;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+.form .form-btn {
+  width: 40%;
+  margin: 1rem auto;
+}
+
+.form form button {
+  background-color: transparent;
+  font-size: 20px;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid gray;
+}
+
+.form-btn button:active {
+  background-color: yellowgreen;
+  color: white;
+  border: none;
+}
+
+.form-btn button:hover {
+  background-color: yellowgreen;
+  color: white;
+  border: none;
+}
+
+.form p {
+  font-size: 1.1rem;
+  margin: 1.5em 0;
+}
+
+.red {
+  color: rgb(246, 63, 63);
+  font-weight: 300;
+  font-size: 18px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .form {
+    z-index: 999;
+  }
+
+  .form form {
+    width: 60%;
+    padding: 0.5rem 2rem;
+  }
+
+  .form h2 {
+    font-size: 2.5rem;
+  }
+
+  .form h2::after {
+    width: 15%;
+    height: 8px;
+  }
+
+  .form form input,
+  .form form button,
+  .form p {
+    font-size: 25px;
+  }
+
+  .form form input {
+    padding: 1rem;
+  }
+
+  .form p {
+    margin: 0.5rem 0;
+  }
+
+  .sign form {
+    width: 70%;
+    padding: 3rem 4rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .form form {
+    width: 60%;
+  }
+}
