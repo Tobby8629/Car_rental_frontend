@@ -36,21 +36,23 @@
 
 > Car Rentals Frontend is a React app that serves as a front end to the Car Rentals project api with rails app. This an educational app for the purpose of Final group capstone.
 
-## Live Demo
+## Live Demo <a name="live-demo"></a>
 
 Click [here](https://car-rental-frontend-pink.vercel.app/login) to get the project's live demo.
 
-## Kanban Board
+## Kanban Board <a name="kanban-board"></a>
 
 Click [here](https://github.com/users/Tobby8629/projects/10) to view the Kanban Board we set out for this project .
 
-## Backend
+A [link](https://github.com/Tobby8629/Car_Rental_Backend/issues/15) to the screenshot of the initial state of our Kanban board.
+
+## Backend <a name="backend"></a>
 
 Api documentation link is [here](https://vc-vscc.onrender.com/api-docs/index.html)
 
 Api live demo is [here](https://vc-vscc.onrender.com/)
 
-## Contributors
+## Contributors <a name="contributors"></a>
 
 There were 4 contributors to this project, you can see their contact information in the Authors section of this document.
 
@@ -155,9 +157,11 @@ In order to run this project you need:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [X] **Apply multi language model**
-- [X] **Add payment option**
-- [X] **Improve The UI Design**
+- [x] **Apply multi language model**
+- [x] **Implement proper user authentication from the front-end to the server.**
+- [x] **Make sure that the "Add item" and "Delete item" links are accessible only by users who are admins.**
+- [x] **Add payment option**
+- [x] **Improve The UI Design**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
